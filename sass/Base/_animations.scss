@@ -1,0 +1,31 @@
+@keyframes swing{
+    0% {transform: rotate(5deg);}
+    50% {transform: rotate(-5deg);}
+    100% {transform: rotate(5deg);}
+
+}
+
+@keyframes vibrate{
+    0%{
+        width: 5rem;
+        height: 5rem;
+        box-shadow: #4267B2  0px 0px 1px 1px;
+    }
+    // 50%{
+    //     width: 5.3rem;   
+    //     height: 5.3rem;
+    //     font-size: 3rem;
+    //     box-shadow: rgb(113, 113, 249) 0px 0px 3px 5px;
+    // }
+    100%{
+        width: 5.5rem;
+        height: 5.5rem;
+        font-size: 3rem;
+        box-shadow: transparent  0px 0px 5px 15px;
+        margin: .7rem 0;
+    }
+}
+
+@keyframes scroll{
+    
+}

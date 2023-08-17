@@ -1,0 +1,29 @@
+section.table-cart{
+    margin: 10rem 0;
+    padding: 0 5%;
+    tr{
+        th{
+
+            font-size: 2rem;
+        }
+        td{
+            font-size: 1.6rem;
+            text-align: center;
+            img{
+                margin: 0 auto;
+            }
+            input{
+                text-align: center;
+            }
+            .btnDelete,
+            .btnDecrease,
+            .btnIncrease{   
+                background-color:#ff3333;
+                padding: .5rem 1rem;
+                border-radius: 10%;
+                color: white;
+            }
+
+        }
+    }
+}  

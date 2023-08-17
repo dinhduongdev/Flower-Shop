@@ -1,0 +1,55 @@
+footer {
+    background-color: #151515;
+    
+    
+    // background-image: url(https://bizweb.dktcdn.net/100/331/200/themes/690740/assets/header-bg2.jpg);
+
+    background-blend-mode: multiply;
+    margin-top: 5rem;
+
+    .info {
+        padding: 2rem 5%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        color: $text-color;
+
+        .item {
+            width: 32%;
+
+            h3 {
+                font-size: 2.5rem;
+                padding-bottom: 2rem;
+                font-weight: 700;
+            }
+
+            p {
+                padding-bottom: 2rem;
+
+                i {
+                    margin-right: 1rem;
+                }
+            }
+            .social{
+                i{
+                    padding: 1rem;
+                    border: 1px solid #d4af53;
+                    border-radius: 50%;
+                    font-size: 2rem;
+                }
+            }
+
+        }
+
+    }
+
+    .copyright {
+        text-align: center;
+        width: 100%;
+        background-image: url(https://bizweb.dktcdn.net/100/331/200/themes/690740/assets/header-bg2.jpg);
+        padding: 2rem 0;
+        font-size: 1.6rem;
+        color: #2F2F33;
+    }
+
+}

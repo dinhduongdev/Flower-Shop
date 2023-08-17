@@ -1,0 +1,84 @@
+section.content {
+  color: #474C5F;
+  padding: 3rem 5%;
+  margin-top: 7rem;
+}
+section.content > h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  border-bottom: 0.1rem solid gray;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+section.content .contact {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+section.content .contact h3 {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+section.content .contact .info {
+  width: 28%;
+  /* margin: 0 1rem; */
+}
+section.content .contact .info .address {
+  /* padding: 2rem 0; */
+  line-height: 1.5;
+}
+section.content .contact .info .address a {
+  text-decoration: none;
+  color: white;
+}
+section.content .contact .info .address address {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+section.content .contact .info i {
+  margin-right: 1rem;
+}
+section.content .contact .info .phone {
+  font-size: 1.6rem;
+  padding: 2rem 0;
+}
+section.content .contact .box-form {
+  width: 70%;
+}
+section.content .contact .box-form form input {
+  height: 4rem;
+  outline: none;
+}
+section.content .contact .box-form form .filed {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  border: 0.1rem solid gray;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+.contact button{
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  section.content .contact {
+    flex-direction: column;
+  }
+  section.content .contact .info {
+    width: 100%;
+  }
+  section.content .contact .box-form {
+    width: 100%;
+  }
+  .contact button{
+    display: block;
+    width: 100%;
+  }
+}/*# sourceMappingURL=contact.css.map */

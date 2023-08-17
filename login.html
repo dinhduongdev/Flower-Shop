@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ====== Favicon ====== -->
+
+  <!-- ====== Boxicons ====== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <!-- ====== Custom CSS ====== -->
+  <!-- <link rel="stylesheet" href="./css/main.css"> -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="./css/social.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/component.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <title>Login</title>
+  <link rel="shortcut icon" href="/images/logo/logo-icon.png" />
+</head>
+
+<body>
+  <div id="load"></div>
+
+  <div class="close">
+    <a href="./home.html"><i class="fa-solid fa-x"></i></a>
+  </div>
+
+  <main class="main">
+    <section class="pagelogin">
+      <div class="login-wrap">
+        <form action="" class="form">
+          <h1>login</h1>
+          <p>Log in now to unlock your exclusive access to content and offers</p>
+          <span>Not registered yet? <a href="./signup.html">Create an account</a></span>
+          <div class="social social-fb">
+            <img class="social__img" src="./images/form/fb.png" alt="">
+            <span class="social__tittle">Sign in with Facebook</span>
+          </div>
+          <div class="social social-gg">
+            <img class="social__img" src="./images/form/google.png" alt="">
+            <span class="social__tittle">Sign in with Google</span>
+          </div>
+          <div class="or">or</div>
+
+          <div class="form__field form__field--email">
+            <div class="field email">
+              <label for="email">Email address:</label>
+              <input type="text" id="email" required>
+            </div>
+            <span class="error" id="email-error">
+            </span>
+          </div>
+          <div class="form__field form__field--password">
+            <div class="field password">
+              <label for="password">Password:</label>
+              <input type="password" id="password" class="type-pass">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <span class="error" id="password-error"></span>
+          </div>
+          <button class="btn form__btn">log in</button>
+          <div class="form__option">
+            <div class="form__option--check">
+              <input type="checkbox" id="checkbox">
+              <label for="checkbox">Keep me logged in</label>
+            </div>
+            <div class="form__option--forget">
+              <a href="#">Forgot password?</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!-- ====== Custom Script ====== -->
+
+  <script src="./js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+section.detail{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 8rem;
+    display: flex;  
+    align-items: center;
+    border: 1px solid black; 
+    .detail__img{
+        width: 50%;
+    }
+    .detail__info{
+        width: 50%;
+    }
+}

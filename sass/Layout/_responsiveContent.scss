@@ -1,0 +1,283 @@
+@include media-xxl {
+
+    // < 1400px
+    section.products {
+        .filter {
+            .item {
+                border-bottom: .1rem solid gray;
+                margin: 1rem 0;
+
+                label {
+                    font-weight: 600;
+                }
+
+                select {
+                    option {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@include media-xl {
+
+    // < 1200px
+    // .section {
+    //     #{&}__sale {
+    //         .sale-time {
+    //             #timer {
+    //                 .timer-item {
+    //                     width: 3rem;
+    //                     height: 2rem;
+    //                     font-size: 1.5rem;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+
+}
+
+@include media-lg {
+
+    // < 992
+    section.slider {
+        height: 30rem;
+
+    }
+
+    section.sale {
+        height: 30rem;
+
+        .sale-time {
+            h3 {
+                font-size: 1.6rem;
+            }
+
+            #timer {
+                font-size: 1.6rem;
+
+                .timer-item {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+
+    section.products {
+
+        .filter {
+            grid-template-columns: 100%;
+            .item {
+
+                margin: 2rem 0;
+
+                label {
+                    font-weight: 600;
+                }
+
+                select {
+                    option {
+                        font-size: 1.4rem;
+                    }
+                }
+
+            }
+
+
+        }
+
+        // danh sách sản phẩm
+        .list {
+            .card {
+                width: 48%;
+                &__name {
+                    font-size: 1.8rem;
+                }
+                &__price{
+                    font-size: 1.6rem;
+                }
+                &__evaluate{
+                    .review{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+
+}
+
+
+@include media-md {
+
+    // <768px
+    section.slider {
+        height: 45rem;
+
+    }
+
+    section.sale {
+        height: 30rem;
+    }
+
+    section.products {
+
+        // danh sách sản phẩm
+        .list {
+            .card {
+                &__name{
+                    font-size: 1.6rem;
+                }
+                &__price{
+                    font-size: 1.4rem;
+                }
+                &__node {
+                    padding: 1rem;
+                    flex-direction: column;
+                    i{
+                        margin-top: .5rem;
+                    }
+                }
+            }
+
+        }
+
+    }
+    section.contact{
+        .contact-link{
+            img{
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+    footer{
+        .info{
+            overflow: hidden;
+
+            flex-direction: column;
+            .item{
+                width: 100%;
+
+    
+            }        
+        }
+    }
+
+
+}
+
+@include media-sm {
+
+    // < 576px
+    section.slider {
+        height: 25rem;
+    }
+
+    section.sale {
+        height: 20rem;
+    }
+
+    section.products {
+        text-align: center;
+
+        h3 {
+            font-size: 2rem;
+            padding: 3rem 0;
+            color: #bd2026;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .filter {
+            font-size: 1.6rem;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 100%;
+            column-gap: 1%;
+            row-gap: 10px;
+
+            .item {
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                select,
+                input,
+                button {
+                    width: 100%;
+                    padding: 5px;
+                    border: none;
+                    background-color: transparent;
+                    border-left: 1px solid #ddd;
+                    outline: none;
+
+                }
+
+                label {
+                    display: block;
+                    width: 40%;
+                    padding: 0 10px;
+                }
+
+                &.submit button {
+                    background-color: #AA82ED;
+                    color: #fff;
+                }
+
+                .countResults {
+                    font-size: xx-large;
+                    text-align: center;
+                    padding: 20px;
+                }
+            }
+        }
+
+        .countResults {
+            font-size: 2.5rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        // danh sách sản phẩm
+        .list {
+            padding: 5rem;
+            .card {
+                width: 100%;
+                &__img{
+                    transform: scale(1.2);
+                }
+                &__name {
+                    font-size: 1.6rem;
+                }
+                &__price {
+                    font-size: 1.2rem;
+                }
+                &__node{
+                    flex-direction: row;
+                }
+                
+            }
+
+        }
+    }
+    section.contact{
+        .contact-link{
+            img{
+                width: 1rem;
+                height: 1rem;
+                padding: 0;
+            }
+        }
+    }
+}

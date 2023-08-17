@@ -1,0 +1,240 @@
+section.detail {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+section.detail .detail__info {}
+
+section.detail .detail__img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section.detail .detail__img,
+section.detail .detail__info {
+  width: 45%;
+  /* border: 1px solid red; */
+}
+
+section.detail .detail__img img {
+  border: .1rem solid var(--primary-color);
+  border-radius: 2rem;
+  margin: auto;
+  cursor: pointer;
+}
+
+
+section.detail .detail__info h3,
+section.detail .detail__info .price,
+section.detail .detail__info .desc,
+section.detail .detail__info .star,
+section.detail .detail__info .quantily,
+section.detail .detail__info .faster,
+section.detail .detail__info .pays {
+  margin-bottom: 1rem;
+}
+
+section.detail .detail__info h3 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+section.detail .detail__info .price {
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
+}
+
+section.detail .detail__info .desc {
+  font-size: 1.6rem;
+  color: var(--gray);
+  font-style: italic;
+}
+
+section.detail .detail__info .star i {
+  color: yellow;
+}
+
+section.detail .detail__info .quantily button {
+  background-color: #ff3333;
+  padding: 0.5rem 1rem;
+  border-radius: 10%;
+  font-size: 1.6rem;
+  color: white;
+
+}
+
+section.detail .detail__info .quantily .btn-quantity {
+  width: 3rem;
+  padding: .5rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+section.detail .detail__info .faster {
+  background-color: #E5E5E5;
+  color: var(--gray);
+  padding: 1rem;
+  font-size: 1.4rem;
+
+}
+
+section.detail .detail__info .faster span {
+  background-color: #222944;
+  color: #fff;
+  padding: .3rem 1rem;
+  border-radius: 2rem;
+  margin-left: 2rem;
+
+}
+
+section.detail .detail__info .faster span i {
+  font-size: 1rem;
+}
+
+section.detail .detail__info .pays {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 1.6rem;
+
+}
+
+section.detail .detail__info .pays .pays-image {
+  display: flex;
+  margin-left: 2rem;
+}
+
+section.detail .detail__info .pays-image img {
+  width: 3rem;
+  height: auto;
+  margin: 0 .5rem;
+
+}
+
+section.detail .detail__img .img-thumbnail {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+
+section.detail .detail__img .img-thumbnail img {
+  width: 15rem;
+  margin: 1rem;
+}
+
+section.connection {
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+section.connection h3 {
+  font-size: 4rem;
+  padding: 3rem 0;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 1000;
+}
+
+section.connection .list-product {
+  padding: 5rem 2rem;
+  background-image: linear-gradient(#ffecd2 0%, #fcb69f 100%);
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 2%;
+  column-gap: 2%;
+  row-gap: 2rem;
+}
+
+section.connection .list {
+  padding: 5rem 2rem;
+  background-image: linear-gradient(#ffecd2 0%, #fcb69f 100%);
+  display: flex;
+  flex-wrap: wrap;
+
+  column-gap: 2%;
+  row-gap: 2rem;
+}
+
+section.connection .list .card {
+  width: 32%;
+}
+
+@media screen and (max-width: 1400px) {}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 992px) {
+  section.connection .list .card {
+    width: 48%;
+  }
+  section.connection .list .card__name {
+    font-size: 1.8rem;
+  }
+  section.connection .list .card__price {
+    font-size: 1.6rem;
+  }
+  section.connection .list .card__evaluate .review {
+    font-size: 1.2rem;
+  } 
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  section.detail {
+    flex-direction: column;
+  }
+
+  section.detail .detail__img,
+  section.detail .detail__info {
+    width: 100%;
+  }
+  section.connection .list .card__name {
+    font-size: 1.6rem;
+  }
+  section.connection .list .card__price {
+    font-size: 1.4rem;
+  }
+  section.connection .list .card__node {
+    padding: 1rem;
+    flex-direction: column;
+  }
+  section.connection .list .card__node i {
+    margin-top: 0.5rem;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  section.detail .detail__info {
+    margin-top: 2rem;
+  }
+  section.connection .list .card {
+    width: 100%;
+  }
+  section.connection .list .card__img {
+    width: 20rem;
+  }
+  section.connection .list .card__name {
+    font-size: 1.6rem;
+  }
+  section.connection .list .card__price {
+    font-size: 1.2rem;
+  }
+  section.connection .list .card__node {
+    flex-direction: row;
+  }   
+}

@@ -1,0 +1,185 @@
+@import './Base/base';
+@import './Abstracts/variable';
+@import './Abstracts/mixin';
+@import './Base/typography';
+@import './Abstracts/variable';
+
+
+.close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: .5rem;
+    i{
+        font-size: 2rem;
+        padding: .5rem .8rem;
+        border-radius: 50%;
+        color: white;
+        background-color: black;
+    }
+}
+.pagelogin{ 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+
+    text-align: center;
+    .login-wrap { 
+        border: 1px solid red;
+        width: 50rem;
+        padding: 2rem;
+        h1{
+            font-size: 3rem;
+            font-weight: 700;
+            padding-bottom: .5rem;
+            text-transform: uppercase;
+        }
+        p{
+            font-size: 1.6rem;
+            padding-bottom: .5rem;
+            text-transform: none;
+            font-weight: 700;
+            a{
+                
+                font-style: italic;
+                color: gray;
+                font-size: 1.2rem;
+                text-transform: capitalize;
+            }
+        }
+        span{
+            font-size: 1.2rem;
+            a{
+                font-style: italic;
+                color: gray;
+            }
+        }
+        .social{
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+
+            width: 70%;
+            margin: 0 auto;
+            margin-top: 1rem;
+
+            img{
+                width: 4rem;
+                height: 4rem;
+            }
+            span{
+                color: white;
+                padding-left: 2rem;
+                font-weight: 700;
+            }
+
+        }
+        .social-fb{
+            border: .1rem solid #3b5998;
+            background-color: #3b5998;
+        }
+        .social-gg{
+            border: .1rem solid #4285F4;
+            background-color: #4285F4;
+        }
+        .or{
+            margin-top: 3rem;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: "";
+                width: 50%;
+                height: .05rem;
+                top: 50%;
+                right: -1rem;
+                transform: translateY(-50%);
+                background-color: gray;
+            }
+            &::before{
+                position: absolute;
+                content: "";
+                width: 50%;
+                height: .05rem;
+                top: 50%;
+                left: -1rem;
+                transform: translateY(-50%);
+                background-color: gray;
+            }
+        }
+        .form{
+            &__field{
+                margin-top: 2rem;
+                label{
+                    float: left;
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                }
+
+                .field{
+                    position: relative;
+                    input{
+                        margin-top: 1rem;
+                        width: 100%;
+                        border: .1rem solid gray;
+                        height: 4rem;
+                        border-radius: 1rem;
+                        padding: 1rem;
+                        font-size: 1.6rem;
+                    }
+                    i{
+                        position: absolute;
+                        top: 60%;
+                        right: 9px;
+
+
+                    }
+                }
+            }
+            button{
+                margin-top: 2rem;
+                width: 40rem;
+                height: 5rem;
+            }
+            &__option{
+                margin-top: 3rem;
+                display: flex;
+                justify-content: space-between;
+                &--check{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+        }
+    }
+
+}
+
+@include media-md{
+    .pagelogin{
+        .login-wrap{
+            width: 40rem;
+            .form{
+                button{
+                    width: 30rem;
+                }
+            }
+        }
+        
+    }
+}
+@include media-sm{
+    .pagelogin{
+        .login-wrap{
+            width: 30rem;
+            .form{
+                button{
+                    width: 20rem;
+                }
+            }
+        }
+        
+    }
+}

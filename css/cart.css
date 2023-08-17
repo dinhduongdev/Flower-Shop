@@ -1,0 +1,85 @@
+.main{
+  min-height: 100rem;
+}
+
+section.table-cart {
+  margin: 10rem 0;
+  padding: 0 5%;
+}
+
+section.table-cart table {
+  border: 1px solid var(--primary-color);
+  border-collapse: collapse;
+  border-radius: 2rem;
+}
+
+section.table-cart tr th {
+  font-size: 2.5rem;
+
+}
+
+section.table-cart tr td {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+section.table-cart tr td img {
+  margin: 0 auto;
+  width: 15rem;
+  height: auto;
+}
+
+section.table-cart tr td input {
+  text-align: center;
+}
+
+section.table-cart tr td .btnDelete,
+section.table-cart tr td .btnDecrease,
+section.table-cart tr td .btnIncrease {
+  background-color: #ff3333;
+  padding: 0.5rem 1rem;
+  border-radius: 10%;
+  color: white;
+}
+
+.order {
+  float: right;
+  margin: 2rem 2rem 0 0;
+}
+
+footer{
+
+}
+
+@media screen and (max-width: 1400px) {}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+
+
+}
+
+@media screen and (max-width: 576px) {
+  section.table-cart tr th{
+    font-size: 2rem;
+  }
+  section.table-cart tr td{
+    font-size: 1.2rem;
+  }
+
+  section.table-cart tr td .btnDelete,
+  section.table-cart tr td .btnDecrease,
+  section.table-cart tr td .btnIncrease {
+    background-color: #ff3333;
+    padding: 0.5rem .5rem;
+    border-radius: 10%;
+    color: white;
+  }
+}

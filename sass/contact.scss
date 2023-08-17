@@ -1,0 +1,81 @@
+@import './Abstracts/mixin';
+
+section.content{
+    color: #474C5F;
+    padding: 3rem 5%;
+    >h3{
+        font-size: 2rem;
+        color: #323C3F;
+        border-bottom: .1rem solid gray;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
+    .contact{
+        margin-top: 3rem;
+        display: flex;
+        h3{
+            font-size: 1.6rem;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        .info{
+            width: 30%;
+            .address{
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                address{
+                    i{
+                        margin-right: .5rem;
+                    }
+                    font-size: 1.6rem;
+                    padding: 1rem 0;
+                }
+            }
+            .phone{
+                font-size: 1.6rem;
+            }
+
+        }
+        .box-form{
+            width: 70%;
+            form{
+                input{
+                    height: 4rem;
+
+                    outline: none;
+
+                }
+                .filed{
+                    display: block;
+                    width: 100%;
+                    margin: 1rem 0;
+                    border: .1rem solid gray;
+                    padding: 1rem;
+                    font-size: 1.6rem;    
+                }
+            }
+        }
+    }
+
+}
+
+@include media-md {
+    
+    section.content{
+        .contact{
+            flex-direction: column;
+
+            .info{
+                width: 100%;
+            }
+            .box-form{
+                width: 100%;
+            }
+        }
+    }   
+}
