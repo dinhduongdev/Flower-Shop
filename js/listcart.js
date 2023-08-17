@@ -20,7 +20,7 @@
           <tr data-id="${index}">
               <td>${item.product.name}</td>
               <td>
-                  <img class="image" src="./${item.product.image[0]}"/>
+                  <img class="image" src="${item.product.image[0]}"/>
               </td>
               <td>
                     <button class="btnDecrease">-</button>
