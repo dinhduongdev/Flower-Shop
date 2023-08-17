@@ -412,7 +412,7 @@ GetProducts(apiSympathy, listSympathyFlower, countSympathyFlower, filterSympathy
 let gotoListCart = document.querySelector(".fa-cart-shopping")
 gotoListCart.addEventListener('click', toggleListCart)
 function toggleListCart() {
-  window.location.href = './cart.html'
+  window.location.href = '/cart.html'
 }
 
 
@@ -425,5 +425,5 @@ function detailproduct(item) {
   console.log(item);
   localStorage.setItem('detail-product', '')
   localStorage.setItem('detail-product', JSON.stringify(item))
-  window.location.href = './detail.html'
+  window.location.href = '/detail.html'
 }
