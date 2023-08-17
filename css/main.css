@@ -782,6 +782,7 @@ section.products .list .card {
 @media screen and (max-width: 768px) {
   section.slider {
     height: 45rem;
+    width: 100%;
   }
   main .slider .buttons{
     display: none;
@@ -789,7 +790,8 @@ section.products .list .card {
 
   main .outstand{
     gap: 1rem;
-    /* padding: 1.5rem 5%; */
+    padding: 1.5rem 5%;
+    margin-top: 1rem;
   }
   main .outstand .icons{
     padding: 1rem;
