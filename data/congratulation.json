@@ -4,9 +4,9 @@
         "name": "SUNNY SMILE",
         "price": 62.6,
         "image": [
-            "../images/products/congratulation/1.1.webp",
-            "../images/products/congratulation/1.2.webp",
-            "../images/products/congratulation/1.3.webp"
+            "./images/products/congratulation/1.1.webp",
+            "./images/products/congratulation/1.2.webp",
+            "./images/products/congratulation/1.3.webp"
         ],
         "nature": {
             "color": [
@@ -21,9 +21,9 @@
         "name": "HAPPY SUCCESS",
         "price": 35.67,
         "image": [
-            "../images/products/congratulation/2.1.webp",
-            "../images/products/congratulation/2.2.webp",
-            "../images/products/congratulation/2.3.webp"
+            "./images/products/congratulation/2.1.webp",
+            "./images/products/congratulation/2.2.webp",
+            "./images/products/congratulation/2.3.webp"
         ],
         "nature": {
             "color": [
@@ -39,9 +39,9 @@
         "name": "SUNNY DAYS",
         "price": 40,
         "image": [
-            "../images/products/congratulation/3.1.webp",
-            "../images/products/congratulation/3.2.webp",
-            "../images/products/congratulation/3.3.webp"
+            "./images/products/congratulation/3.1.webp",
+            "./images/products/congratulation/3.2.webp",
+            "./images/products/congratulation/3.3.webp"
         ],
         "nature": {
             "color": [
@@ -56,9 +56,9 @@
         "name": "WONDERFUL CEREMONY",
         "price": 44.44,
         "image": [
-            "../images/products/congratulation/4.1.webp",
-            "../images/products/congratulation/4.2.webp",
-            "../images/products/congratulation/4.3.webp"
+            "./images/products/congratulation/4.1.webp",
+            "./images/products/congratulation/4.2.webp",
+            "./images/products/congratulation/4.3.webp"
         ],
         "nature": {
             "color": [
@@ -73,9 +73,9 @@
         "name": "FAIRYTALE",
         "price": 116.67,
         "image": [
-            "../images/products/congratulation/5.1.jpg",
-            "../images/products/congratulation/5.2.jpg",
-            "../images/products/congratulation/5.3.jpg"
+            "./images/products/congratulation/5.1.jpg",
+            "./images/products/congratulation/5.2.jpg",
+            "./images/products/congratulation/5.3.jpg"
         ],
         "nature": {
             "color": [
@@ -90,9 +90,9 @@
         "name": "VIVA LA VIDA",
         "price": 78.5,
         "image": [
-            "../images/products/congratulation/6.1.webp",
-            "../images/products/congratulation/6.2.webp",
-            "../images/products/congratulation/6.3.webp"
+            "./images/products/congratulation/6.1.webp",
+            "./images/products/congratulation/6.2.webp",
+            "./images/products/congratulation/6.3.webp"
         ],
         "nature": {
             "color": [

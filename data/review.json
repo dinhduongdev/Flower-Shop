@@ -1,26 +1,26 @@
 [
     {
-        "image": "../images/review/1.jpg",
+        "image": "./images/review/1.jpg",
         "name": "Mark Zuckerberg",
         "comment": "Breathtaking floral elegance, enchanting every gaze."
     },
     {
-        "image": "../images/review/2.jpg",
+        "image": "./images/review/2.jpg",
         "name": "Sơn Tùng MTP",
         "comment": "Nature's poetry, vibrant petals in graceful harmony."
     },
     {
-        "image": "../images/review/3.jpg",
+        "image": "./images/review/3.jpg",
         "name": "Leo Messi",
         "comment": "Artfully curated blooms, a symphony of colors."
     },
     {
-        "image": "../images/review/4.jpg",
+        "image": "./images/review/4.jpg",
         "name": "Cristiano Ronaldo",
         "comment": "Captivating blossoms, a garden's soul in each."
     },
     {
-        "image": "../images/review/5.jpg",
+        "image": "./images/review/5.jpg",
         "name": "Neymar Jr.",
         "comment": "Eternal beauty embodied in every petal's dance."
     }
