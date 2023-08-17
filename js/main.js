@@ -325,7 +325,7 @@ function handleFilterSubmit(event, product, list, count) {
   showProduct(productFilter, list, count);
 }
 
-let apiLove = './data/love.json' // api products
+let apiLove = '../data/love.json' // api products
 let listLoveFlower = document.getElementById('list-love-flower');  // list love
 //let filter = document.querySelector('.filter');
 let countLoveFlower = document.getElementById('count-love-flower');
@@ -362,14 +362,14 @@ let filterLove = document.querySelector('.filter--love');
 GetProducts(apiLove, listLoveFlower, countLoveFlower, filterLove);
 
 
-let apiBirth = './data/birthday.json' // api products
+let apiBirth = '../data/birthday.json' // api products
 let listBirthFlower = document.getElementById('list-birth-flower'); // filter products
 let countBirthFlower = document.getElementById('count-birth-flower');
 let filterBirth = document.querySelector('.filter--birth');
 GetProducts(apiBirth, listBirthFlower, countBirthFlower, filterBirth);
 
 
-let apiCongratulation = './data/congratulation.json' // api products
+let apiCongratulation = '../data/congratulation.json' // api products
 let listCongratulationFlower = document.getElementById('list-congratulation-flower'); // filter products
 let countCongratulationFlower = document.getElementById('count-congratulation-flower');
 let filterCongratulation = document.querySelector('.filter--congratulation');
@@ -377,7 +377,7 @@ GetProducts(apiCongratulation, listCongratulationFlower, countCongratulationFlow
 
 
 
-let apiSympathy = './data/sympathy.json' // api products
+let apiSympathy = '../data/sympathy.json' // api products
 let listSympathyFlower = document.getElementById('list-sympathy-flower');// filter products
 let countSympathyFlower = document.getElementById('count-sympathy-flower');
 let filterSympathy = document.querySelector('.filter--sympathy');

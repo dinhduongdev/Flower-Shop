@@ -1,4 +1,4 @@
-const api = './data/review.json'
+const api = '../data/review.json'
 let containerRight = document.querySelector(".container__right")
 console.log(containerRight);
 
