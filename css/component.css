@@ -273,7 +273,7 @@
 @media screen and (max-width: 992px) {
 
     .card {
-        width: 48%;
+        /* width: 48%; */
     }
 
     .card__name {
