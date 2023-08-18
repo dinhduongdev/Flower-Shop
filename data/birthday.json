@@ -100,5 +100,39 @@
             "type": "birthday"
         },
         "review": 21844
+    },
+    {
+        "id": 7,
+        "name": "MILLION LITTLE THINGS",
+        "price": 34,
+        "image": [
+            "./images/products/birthday/7.1.jpg",
+            "./images/products/birthday/7.2.jpg",
+            "./images/products/birthday/7.3.jpg"
+        ],
+        "nature": {
+            "color": [
+                "blue"
+            ],
+            "type": "birthday"
+        },
+        "review": 10002
+    },
+    {
+        "id": 8,
+        "name": "UNDER THE BLUE SKY",
+        "price": 26,
+        "image": [
+            "./images/products/birthday/8.1.jpg",
+            "./images/products/birthday/8.2.jpg",
+            "./images/products/birthday/8.3.jpg"
+        ],
+        "nature": {
+            "color": [
+                "blue"
+            ],
+            "type": "birthday"
+        },
+        "review": 10002
     }
 ]

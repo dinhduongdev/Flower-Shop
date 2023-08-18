@@ -2,7 +2,7 @@ const api = './data/review.json'
 let containerRight = document.querySelector(".container__right")
 console.log(containerRight);
 
-function loadcomment(api){
+function loadcomment(api) {
     fetch(api)
         .then((response) => response.json())
         .then(data => {
@@ -33,3 +33,21 @@ function loadcomment(api){
 loadcomment(api)
 
 
+
+let valueDisplays = document.querySelectorAll(".number-achievements");
+let interval = 5000;
+
+valueDisplays.forEach((valueDisplay) => {
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+    let duration = Math.floor(interval / endValue);
+    
+    let counter = setInterval(function () {
+        if (startValue < endValue) {
+            startValue += 1;
+            valueDisplay.textContent = startValue ;
+        } else {
+            clearInterval(counter); 
+        }
+    }, duration);
+});

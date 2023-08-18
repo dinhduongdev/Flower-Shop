@@ -1,19 +1,19 @@
 let numberFormat = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' })
 
 // scroll
-let scroll = document.querySelector('.scroll-top');
-window.addEventListener('scroll', () => {
-  if (document.documentElement.scrollTop > 200) {
-    scroll.style.display = 'block';
-  } else {
-    scroll.style.display = 'none';
-  }
-});
+// let scroll = document.querySelector('.scroll-top');
+// window.addEventListener('scroll', () => {
+//   if (document.documentElement.scrollTop > 200) {
+//     scroll.style.display = 'block';
+//   } else {
+//     scroll.style.display = 'none';
+//   }
+// });
 
-function topFunction() {
-  document.documentElement.scrollTop = 0;
+// function topFunction() {
+//   document.documentElement.scrollTop = 0;
 
-}
+// }
 
 
 let load = document.getElementById('loader');
@@ -36,19 +36,13 @@ window.addEventListener("load", function () {
 document.querySelector(".fa-cart-shopping span").innerHTML = localStorage.getItem("quatilyCart") ? localStorage.getItem("quatilyCart") : "0";
 /* ========== Navigation =========== */
 document.querySelectorAll(".nav-item ul li a").forEach((item => {
-
   item.addEventListener('click', () => {
-
     if (screen.width < 768) {
       location.reload()
     }
-
-  })
-}
-  
+  })}
 ))
 
-/* ========== Navigation =========== */
 var iconSearch = document.querySelector(".header__optionSearch .icon-search");
 var iconClose = document.querySelector(".header__searchbox .icon-close");
 var boxSearch = document.querySelector(".header__searchbox");
@@ -81,48 +75,78 @@ iconMenu.addEventListener("click", () => {
 });
 
 
+const api = "./data/slider.json";
+document.addEventListener('DOMContentLoaded', function () {
+  const slider = document.querySelector('.slider .list');
+  const next = document.getElementById('next');
+  const prev = document.getElementById('prev');
+  const dots = document.querySelectorAll('.slider .dots li');
 
-/* ========== User Form =========== */
-let slider = document.querySelector('.slider .list');
-let items = document.querySelectorAll('.slider .list .item');
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
-let dots = document.querySelectorAll('.slider .dots li');
+  let items = [];
+  let lengthItems = 0;
+  let active = 0;
+  let refreshInterval;
 
-let lengthItems = items.length - 1;
-let active = 0;
-next.onclick = function () {
-  active = active + 1 <= lengthItems ? active + 1 : 0;
-  reloadSlider();
-}
-prev.onclick = function () {
-  active = active - 1 >= 0 ? active - 1 : lengthItems;
-  reloadSlider();
-}
+  function initializeSlider(data) {
+    let textList = '';
+    data.forEach(item => {
+      textList +=
+        `
+                <div class="item">
+                    <img src="${item.image}" alt="">
+                </div>
+            `;
+    });
+    slider.innerHTML = textList;
+    items = document.querySelectorAll('.slider .list .item');
+    lengthItems = items.length - 1;
+    console.log(lengthItems);
 
+    next.onclick = function () {
+      active = active + 1 <= lengthItems ? active + 1 : 0;
+      console.log(active);
+      reloadSlider();
+    }
 
-let refreshInterval = setInterval(() => { next.click() }, 3000);
-function reloadSlider() {
-  slider.style.left = -items[active].offsetLeft + 'px';
-  // 
-  let last_active_dot = document.querySelector('.slider .dots li.active');
-  last_active_dot.classList.remove('active');
-  dots[active].classList.add('active');
+    prev.onclick = function () {
+      active = active - 1 >= 0 ? active - 1 : lengthItems;
+      reloadSlider();
+    }
 
-  clearInterval(refreshInterval);
-  refreshInterval = setInterval(() => { next.click() }, 3000);
-}
+    dots.forEach((li, key) => {
+      li.addEventListener('click', () => {
+        active = key;
+        reloadSlider();
+      })
+    });
 
-dots.forEach((li, key) => {
-  li.addEventListener('click', () => {
-    active = key;
+    startAutomaticSliding();
     reloadSlider();
-  })
-})
-window.onresize = function (event) {
-  reloadSlider();
-};
+    window.onresize = function (event) {
+      reloadSlider();
+    };
+  }
 
+  function reloadSlider() {
+    slider.style.left = -items[active].offsetLeft + 'px';
+
+    const lastActiveDot = document.querySelector('.slider .dots li.active');
+    lastActiveDot.classList.remove('active');
+    dots[active].classList.add('active');
+    clearInterval(refreshInterval);
+    startAutomaticSliding();
+  }
+
+  function startAutomaticSliding() {
+    refreshInterval = setInterval(() => { next.click() }, 3000);
+  }
+
+  fetch(api)
+    .then(response => response.json())
+    .then(data => {
+      initializeSlider(data);
+    })
+});
 
 // /* ========== Countdown timer =========== */
 // Set the date we're counting down to
@@ -211,11 +235,12 @@ function showProduct(product, list, count) {
     // create card
     let newItem = document.createElement('div');
     newItem.classList.add('card');
-    newItem.addEventListener('click', () => { detailproduct(item) })
+
 
     // create image
     let imageCard = new Image();
     imageCard.classList.add("card__img");
+    imageCard.addEventListener('click', () => { detailproduct(item) })
     imageCard.src = item.image[0];
     newItem.appendChild(imageCard); // nối element vào card
 
@@ -272,19 +297,6 @@ function showProduct(product, list, count) {
     nodeCart.appendChild(newAdd);
 
 
-    // create detail
-    let newHeart = document.createElement('i');
-    newHeart.classList.add("fa-solid", "fa-heart", "card__heart")
-    nodeCart.appendChild(newHeart)
-
-
-
-
-    // create star
-    let newDetail = document.createElement('i');
-    newDetail.classList.add("fa-solid", "fa-eye", "card__detail")
-    newDetail.addEventListener('click', () => { detailproduct(item) })
-    nodeCart.appendChild(newDetail)
     newItem.appendChild(nodeCart)  // gán cho card
     // gan card cho list
     list.appendChild(newItem);
@@ -385,26 +397,6 @@ GetProducts(apiSympathy, listSympathyFlower, countSympathyFlower, filterSympathy
 
 
 
-
-
-// // filter product
-
-// // call
-
-// // let filterLove = document.querySelector('.filter--love');
-// // filterLove.addEventListener('submit', function (event) {
-// //   handleFilterSubmit(event, listLoveFlowers, listLoveFlower, countLoveFlower);
-// // });
-
-// // let filterBirth = document.querySelector('.filter--birth');
-// // filterBirth.addEventListener('submit', function (event) {
-// //   handleFilterSubmit(event, listBirthDayFlowers, listBirthFlower, countBirthFlower);
-// // });
-
-// // let filterSympathy = document.querySelector('.filter--sympathy');
-// // filterSympathy.addEventListener('submit', function (event) {
-// //   handleFilterSubmit(event, listSympathyFlowers, listSympathyFlower, countSympathyFlower);
-// // });
 
 
 

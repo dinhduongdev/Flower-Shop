@@ -51,9 +51,10 @@
     deleteButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
             let row = btn.closest('tr');  // lấy tổ tiên gần nhất
-            let index = row.dataset.id;  // lấy dataset
+            let index = parseInt(row.dataset.id); // lấy dataset
             data.splice(index, 1); // phương thức splice để xoá
             quantily--;
+
             localStorage.setItem('listCart', JSON.stringify(data));  // cập nhật lại local localStorage
             localStorage.setItem('quatilyCart', JSON.stringify(quantily));  // cập nhật lại local localStorage
             loadData(); // cập nhật lại dữ liệu
@@ -81,11 +82,13 @@
             let index = row.dataset.id;
             data[index].quatily--;
             // quantily--;
+
             if (data[index].quatily <= 0) {
                 data.splice(index, 1);
+                quantily--
             }
             localStorage.setItem('listCart', JSON.stringify(data));
-            // localStorage.setItem('quatilyCart', JSON.stringify(quantily));
+            localStorage.setItem('quatilyCart', JSON.stringify(quantily));
             loadData();
         });
     });

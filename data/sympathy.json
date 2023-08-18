@@ -101,5 +101,39 @@
             "type": "sympathy"
         },
         "review": 21844
+    },
+    {
+        "id": 7,
+        "name": "LAST GREETINGS",
+        "price": 78.5,
+        "image": [
+            "./images/products/sympathy/7.1.jpg",
+            "./images/products/sympathy/7.1.jpg",
+            "./images/products/sympathy/7.1.jpg"
+        ],
+        "nature": {
+            "color": [
+                "yellow"
+            ],
+            "type": "sympathy"
+        },
+        "review": 21844
+    },
+    {
+        "id": 8,
+        "name": "ETERNAL LOVE",
+        "price": 48.5,
+        "image": [
+            "./images/products/sympathy/8.1.jpg",
+            "./images/products/sympathy/8.2.jpg",
+            "./images/products/sympathy/8.3.jpg"
+        ],
+        "nature": {
+            "color": [
+                "white"
+            ],
+            "type": "sympathy"
+        },
+        "review": 21844
     }
 ]

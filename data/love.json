@@ -134,22 +134,5 @@
             "type": "love"
         },
         "review": 1244
-    },
-    {
-        "id": 9,
-        "name": "FOREVER 18",
-        "price": 140,
-        "image": [
-            "./images/products/love/9.1.jpg",
-            "./images/products/love/9.2.jpg",
-            "./images/products/love/9.3.jpg"
-        ],
-        "nature": {
-            "color": [
-                "red"
-            ],
-            "type": "'Love'"
-        },
-        "review": 4038
-    }
+    }   
 ]

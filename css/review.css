@@ -14,6 +14,7 @@ main .review .container {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .container .container__right,
@@ -34,7 +35,9 @@ main .review .container {
   margin-bottom: 3rem;
   font-size: 4rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--primary-color);  
+  text-shadow: 3px 3px 20px #ff99cc,
+  -2px 1px 30px #ff99cc;
 }
 
 .container .container__left p {
@@ -101,6 +104,59 @@ main .review .container {
 }
 
 
+
+section.achievements{
+  padding: 3rem 0;
+}
+.achievements .container{
+  width: 50%;
+  margin: 0 auto;
+}
+.achievements .container .achievements-list{
+  display: flex;
+  justify-content: space-around;
+}
+
+.achievements-list .achievements-list-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color:white;
+  width: 15rem;
+  height: 15rem;
+  text-align: center;
+  border-bottom: 1rem solid #ff99cc;
+  border-radius: 10px;
+  box-shadow: 0 0 3rem #bbb;
+  scale: 1.0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.achievements-list .achievements-list-item:hover{
+  scale: 1.2;
+  transition: 0.3s;
+}
+
+
+
+.achievements-list .achievements-list-item img{
+  width: 5rem;
+  margin: 0 auto;
+}
+.achievements-list .achievements-list-item .number-achievements{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-shadow: 3px 3px 20px #ff99cc,
+  -2px 1px 30px #ff99cc;
+}
+.achievements-list .achievements-list-item .text-achievements{
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: black;
+  opacity: 0.8;
+}
+
 @media screen and (max-width: 1400px) {}
 
 @media screen and (max-width: 1200px) {}
@@ -120,7 +176,13 @@ main .review .container {
   .container .container__left .btn{
     width: 100%;
   }
+
+  .achievements .container{
+    width: 100%;
+  }
 }
+
+
 
 @media screen and (max-width: 768px) {
   html{
@@ -128,4 +190,12 @@ main .review .container {
   }
 }
 
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+  .achievements-list .achievements-list-item{
+    width: 10rem;
+    height: 13rem;
+  }
+  .achievements-list .achievements-list-item img{
+    width: 4rem;
+  }
+}

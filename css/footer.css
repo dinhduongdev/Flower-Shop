@@ -50,6 +50,10 @@ footer .info .item .social i {
   border-radius: 50%;
   font-size: 2rem;
   cursor: pointer;
+  transition: .5s all;
+}
+footer .info .item .social i:hover{
+  background-color: black;
 }
 
 footer .copyright {
@@ -69,13 +73,13 @@ footer .map {
 
 @media (max-width: 768px) {
   html {
-    font-size: 50%;
+    font-size: 55%;
   }
 
   footer .info {
     overflow: hidden;
     flex-direction: column;
-    padding: 5rem;
+    padding: 4rem;
     text-align: justify;
     /* font-size: 1.4rem; */
   }

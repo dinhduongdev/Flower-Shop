@@ -1,5 +1,5 @@
 section.detail {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 10rem;
   margin-bottom: 3rem;
@@ -21,13 +21,15 @@ section.detail .detail__img,
 section.detail .detail__info {
   width: 45%;
   /* border: 1px solid red; */
+  margin-bottom: 2rem;
 }
 
 section.detail .detail__img img {
-  border: .1rem solid var(--primary-color);
-  border-radius: 2rem;
+  /* border: .1rem solid var(--primary-color); */
+  /* border-radius: 2rem; */
   margin: auto;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
 
@@ -38,7 +40,7 @@ section.detail .detail__info .star,
 section.detail .detail__info .quantily,
 section.detail .detail__info .faster,
 section.detail .detail__info .pays {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 section.detail .detail__info h3 {
@@ -49,7 +51,7 @@ section.detail .detail__info h3 {
 }
 
 section.detail .detail__info .price {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: black;
   font-weight: 700;
 }
@@ -62,6 +64,7 @@ section.detail .detail__info .desc {
 
 section.detail .detail__info .star i {
   color: yellow;
+  font-size: 1.5rem;
 }
 
 section.detail .detail__info .quantily button {
@@ -84,8 +87,9 @@ section.detail .detail__info .faster {
   background-color: #E5E5E5;
   color: var(--gray);
   padding: 1rem;
-  font-size: 1.4rem;
-
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 section.detail .detail__info .faster span {
@@ -94,11 +98,11 @@ section.detail .detail__info .faster span {
   padding: .3rem 1rem;
   border-radius: 2rem;
   margin-left: 2rem;
-
 }
 
 section.detail .detail__info .faster span i {
   font-size: 1rem;
+  margin-right: 5px;
 }
 
 section.detail .detail__info .pays {
@@ -106,7 +110,6 @@ section.detail .detail__info .pays {
   align-items: center;
   color: black;
   font-size: 1.6rem;
-
 }
 
 section.detail .detail__info .pays .pays-image {
@@ -115,10 +118,9 @@ section.detail .detail__info .pays .pays-image {
 }
 
 section.detail .detail__info .pays-image img {
-  width: 3rem;
-  height: auto;
-  margin: 0 .5rem;
-
+  /* width: 3rem; */
+  height: 3rem;
+  margin-right: 1rem;
 }
 
 section.detail .detail__img .img-thumbnail {
@@ -133,7 +135,7 @@ section.detail .detail__img .img-thumbnail img {
 }
 
 section.connection {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 
 }
@@ -144,6 +146,8 @@ section.connection h3 {
   color: var(--primary-color);
   text-transform: uppercase;
   font-weight: 1000;
+  text-shadow: 3px 3px 20px #ff99cc,
+    -2px 1px 30px #ff99cc;
 }
 
 section.connection .list-product {
@@ -178,15 +182,18 @@ section.connection .list .card {
   section.connection .list .card {
     width: 48%;
   }
+
   section.connection .list .card__name {
     font-size: 1.8rem;
   }
+
   section.connection .list .card__price {
     font-size: 1.6rem;
   }
+
   section.connection .list .card__evaluate .review {
     font-size: 1.2rem;
-  } 
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -198,20 +205,25 @@ section.connection .list .card {
     flex-direction: column;
   }
 
+
   section.detail .detail__img,
   section.detail .detail__info {
     width: 100%;
   }
+
   section.connection .list .card__name {
     font-size: 1.6rem;
   }
+
   section.connection .list .card__price {
     font-size: 1.4rem;
   }
+
   section.connection .list .card__node {
     padding: 1rem;
     flex-direction: column;
   }
+
   section.connection .list .card__node i {
     margin-top: 0.5rem;
   }
@@ -219,22 +231,35 @@ section.connection .list .card {
 }
 
 @media screen and (max-width: 576px) {
+  section.connection h3 {
+    font-size: 3rem;
+  }
+
+  section.connection .list {
+    padding: 5rem;
+  }
+
   section.detail .detail__info {
     margin-top: 2rem;
   }
+
   section.connection .list .card {
     width: 100%;
   }
+
   section.connection .list .card__img {
     width: 20rem;
   }
+
   section.connection .list .card__name {
     font-size: 1.6rem;
   }
+
   section.connection .list .card__price {
     font-size: 1.2rem;
   }
+
   section.connection .list .card__node {
     flex-direction: row;
-  }   
+  }
 }

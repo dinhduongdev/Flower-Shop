@@ -101,5 +101,39 @@
             "type": "congratulation"
         },
         "review": 21844
+    },
+    {
+        "id": 7,
+        "name": "URANIA",
+        "price": 28.5,
+        "image": [
+            "./images/products/congratulation/7.1.jpg",
+            "./images/products/congratulation/7.2.jpg",
+            "./images/products/congratulation/7.3.jpg"
+        ],
+        "nature": {
+            "color": [
+                "while"
+            ],
+            "type": "congratulation"
+        },
+        "review": 21844
+    },
+    {
+        "id": 8,
+        "name": "WILDFIRE",
+        "price": 28.5,
+        "image": [
+            "./images/products/congratulation/8.1.jpg",
+            "./images/products/congratulation/8.2.jpg",
+            "./images/products/congratulation/8.3.jpg"
+        ],
+        "nature": {
+            "color": [
+                "yellow"
+            ],
+            "type": "congratulation"
+        },
+        "review": 21844
     }
 ]

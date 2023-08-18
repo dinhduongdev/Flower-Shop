@@ -97,11 +97,12 @@ function addProduct() {
     let detail = JSON.parse(localStorage.getItem("detail-product"));
 
     let found = false;
+    console.log(quatily);
 
     for (let i = 0; i < listCart.length; i++) {
-        let item = listCart[i];
-        if (item.product.id === detail.id && item.product.nature.type === detail.nature.type) {
-            item.quantity += detail.quantity; // Cập nhật số lượng
+        console.log(listCart[i].quatily);
+        if (listCart[i].product.id === detail.id && listCart[i].product.nature.type === detail.nature.type) {
+            listCart[i].quatily += quatily; // Cập nhật số lượng
             found = true;
             break; // Tìm thấy sản phẩm khớp, không cần kiểm tra tiếp
         }
@@ -207,11 +208,12 @@ function showProduct() {
                 // create card
                 let newItem = document.createElement('div');
                 newItem.classList.add('card');
-                newItem.addEventListener('click', () => { detailproduct(item) })
+
 
                 // create image
                 let imageCard = new Image();
                 imageCard.classList.add("card__img");
+                imageCard.addEventListener('click', () => { detailproduct(item) })
                 imageCard.src = item.image[0];
                 newItem.appendChild(imageCard); // nối element vào card
 
@@ -267,17 +269,6 @@ function showProduct() {
                 newAdd.addEventListener('click', () => addToCard(item.id, data, item.nature.type));
                 nodeCart.appendChild(newAdd);
 
-
-                // create detail
-                let newHeart = document.createElement('i');
-                newHeart.classList.add("fa-solid", "fa-heart", "card__heart")
-                nodeCart.appendChild(newHeart)
-
-
-                // create star
-                let newDetail = document.createElement('i');
-                newDetail.classList.add("fa-solid", "fa-eye", "card__detail")
-                nodeCart.appendChild(newDetail)
                 newItem.appendChild(nodeCart)  // gán cho card
                 // gan card cho list
                 list.appendChild(newItem);

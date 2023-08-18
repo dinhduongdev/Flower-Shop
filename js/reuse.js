@@ -65,3 +65,14 @@ function toggleListCart(){
 
 
 
+let scroll = document.querySelector('.scroll-top');
+window.addEventListener('scroll', () => {
+  if (document.documentElement.scrollTop > 200) {
+    scroll.style.display = 'block';
+  } else {
+    scroll.style.display = 'none';
+  }
+});
+function topFunction() {
+  document.documentElement.scrollTop = 0;
+}

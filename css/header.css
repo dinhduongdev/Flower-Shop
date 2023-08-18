@@ -75,7 +75,7 @@
   .header .header__option--nav .nav-links .nav-item > a {
     font-family: "Raleway", sans-serif;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     color: black;
     text-transform: uppercase;
@@ -83,6 +83,8 @@
     position: relative;
     line-height: 7rem;
     display: block;
+
+
   }
   .header .header__option--nav .nav-links .nav-item > a::before {
     position: absolute;
@@ -132,7 +134,7 @@
     color: black;
     text-transform: uppercase;
     padding: 1.5rem 1rem;
-    display: block;;
+    display: block;
   }
   .header .header__option--nav .nav-links .nav-item > ul li a:hover {
     color: var(--green-text);
