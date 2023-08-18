@@ -75,6 +75,8 @@ let quatilyText = document.querySelector(".btn-quantity");
 let quatily = 1;
 increaseButtons.addEventListener('click', () => {
     quatily++;
+    decreaseButtons.classList.remove("disabled")
+    decreaseButtons.removeAttribute("disabled");
     quatilyText.value = quatily;
     console.log(quatily);
 });
@@ -82,9 +84,14 @@ increaseButtons.addEventListener('click', () => {
 //giảm
 let decreaseButtons = document.querySelector('.btnDecrease');
 decreaseButtons.addEventListener('click', () => {
-    quatily--;
+    if(quatily === 1){
+        decreaseButtons.setAttribute("disabled", "true");
+        decreaseButtons.classList.add("disabled")
+    }else{
+        quatily--;
+    }
+
     quatilyText.value = quatily;
-    console.log(quatily);
 });
 
 

@@ -5,42 +5,44 @@
     let text =
         `
           <tr>
-              <th>Name Product</th>
-              <th>Image</th>
-              <th>Quantity</th>
-              <th>Price</th>
-              <th>Delete</th>
+            <th colspan = "2">Product(s)</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Delete</th>
           </tr>
       `;
     let sumMoney = 0;
-
+    let sumQuantity = 0;
+    
     data.forEach((item, index) => {
         text +=
             `
-          <tr data-id="${index}">
-              <td>${item.product.name}</td>
-              <td>
-                  <img class="image" src="${item.product.image[0]}"/>
-              </td>
-              <td>
-                    <button class="btnDecrease">-</button>
-                    <input type="text" style="width: 30px" value="${item.quatily}">
-                    <button class="btnIncrease">+</button>
-              </td>
-              <td>${item.product.price}$</td>
-              <td>
-                  <button class="btnDelete">Delete</button>
-              </td>
+            <tr data-id="${index}">
+                <td>
+                    <img class="image" src="${item.product.image[0]}"/>
+                </td>
+                <td>${item.product.name}</td>
+                <td>
+                        <button class="btnDecrease">-</button>
+                        <input type="text" value="${item.quatily}">
+                        <button class="btnIncrease">+</button>
+                </td>
+                <td class = "price">${item.product.price}$</td>
+                <td>
+                    <button class="btnDelete">Delete</button>
+                </td>
           </tr>
       `;
         sumMoney += item.quatily * item.product.price;
+       sumQuantity += item.quatily
     });
 
     text +=
-        `
+        ` 
           <tr>
               <th colspan="2">Total</th>
-              <th colspan="3">${sumMoney}$</th>
+              <th>${sumQuantity}</th>
+              <th colspan="2" class = "price">${sumMoney.toFixed(2)} $</th>
           </tr>
       `;
 

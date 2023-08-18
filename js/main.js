@@ -1,19 +1,19 @@
 let numberFormat = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' })
 
 // scroll
-// let scroll = document.querySelector('.scroll-top');
-// window.addEventListener('scroll', () => {
-//   if (document.documentElement.scrollTop > 200) {
-//     scroll.style.display = 'block';
-//   } else {
-//     scroll.style.display = 'none';
-//   }
-// });
+let scroll = document.querySelector('.scroll-top');
+window.addEventListener('scroll', () => {
+  if (document.documentElement.scrollTop > 200) {
+    scroll.style.display = 'block';
+  } else {
+    scroll.style.display = 'none';
+  }
+});
 
-// function topFunction() {
-//   document.documentElement.scrollTop = 0;
+function topFunction() {
+  document.documentElement.scrollTop = 0;
 
-// }
+}
 
 
 let load = document.getElementById('loader');

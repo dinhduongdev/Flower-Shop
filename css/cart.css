@@ -1,21 +1,38 @@
+.clear{
+  clear: both;
+}
+
 .main{
   min-height: 100rem;
 }
 
+/*thay cái cart*/
+
 section.table-cart {
   margin: 10rem 0;
   padding: 0 5%;
+  font-weight: 600;
+}
+
+section.table-cart h1{
+  font-size: 3rem;
+  font-weight: 800;
+  padding: 1rem 0;
+  border-bottom: 1px solid #000;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
 }
 
 section.table-cart table {
-  border: 1px solid var(--primary-color);
+  border: 1px solid #d6d6d4;
   border-collapse: collapse;
-  border-radius: 2rem;
 }
 
 section.table-cart tr th {
   font-size: 2.5rem;
-
+  text-transform: none;
+  padding: 2rem 5px;
+  background-color: #f4f4f2;
 }
 
 section.table-cart tr td {
@@ -25,48 +42,89 @@ section.table-cart tr td {
 
 section.table-cart tr td img {
   margin: 0 auto;
-  width: 15rem;
+  width: 12rem;
   height: auto;
 }
 
 section.table-cart tr td input {
   text-align: center;
+  width: 4rem;
+  height: 4rem;
 }
 
 section.table-cart tr td .btnDelete,
 section.table-cart tr td .btnDecrease,
 section.table-cart tr td .btnIncrease {
-  background-color: #ff3333;
-  padding: 0.5rem 1rem;
-  border-radius: 10%;
+  background-color: var(--green-bg);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 5%;
   color: white;
+}
+section.table-cart tr td .btnDelete:hover,
+section.table-cart tr td .btnDecrease:hover,
+section.table-cart tr td .btnIncrease:hover{
+  background-color: var(--green-text);
+  transition: 0.2s;
+}
+
+section.table-cart tr td .btnDelete{
+  width: 15rem;
 }
 
 .order {
   float: right;
-  margin: 2rem 2rem 0 0;
+  margin-top: 2rem;
+  padding: 2rem 5rem;
+  font-size: 1.5rem;
 }
 
-footer{
+.price{
+  color: #45cc8f;
+  font-weight: 700;
+}
 
+section.table-cart tr td button.disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media screen and (max-width: 1400px) {}
 
 @media screen and (max-width: 1200px) {}
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+  section.table-cart tr td input,
+  section.table-cart tr td .btnDelete,
+  section.table-cart tr td .btnDecrease,
+  section.table-cart tr td .btnIncrease{
+    width: 4rem;
+    height: 4rem;
+  }
+
+  section.table-cart tr td .btnDelete{
+    width: 10rem;
+  }
+}
 
 @media screen and (max-width: 768px) {
   html {
     font-size: 55%;
   }
 
+  section.table-cart{
+    padding: 0 2%;
+  }
 
-
+  .order{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 576px) {
+  section.table-cart{
+    padding: 0 1%;
+  }
   section.table-cart tr th{
     font-size: 2rem;
   }
@@ -74,12 +132,14 @@ footer{
     font-size: 1.2rem;
   }
 
+  section.table-cart tr td input,
   section.table-cart tr td .btnDelete,
   section.table-cart tr td .btnDecrease,
   section.table-cart tr td .btnIncrease {
-    background-color: #ff3333;
-    padding: 0.5rem .5rem;
-    border-radius: 10%;
-    color: white;
+    width: 2rem;
+    height: 2rem;
+  }
+  section.table-cart tr td .btnDelete{
+    width: 6rem;
   }
 }
