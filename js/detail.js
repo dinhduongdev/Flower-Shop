@@ -84,10 +84,10 @@ increaseButtons.addEventListener('click', () => {
 //giảm
 let decreaseButtons = document.querySelector('.btnDecrease');
 decreaseButtons.addEventListener('click', () => {
-    if(quatily === 1){
+    if (quatily === 1) {
         decreaseButtons.setAttribute("disabled", "true");
         decreaseButtons.classList.add("disabled")
-    }else{
+    } else {
         quatily--;
     }
 
@@ -133,7 +133,25 @@ function addProduct() {
 
 let btnDetail = document.querySelector(".btn-detail")
 btnDetail.addEventListener('click', () => {
-    addProduct()
+
+    let status = localStorage.getItem("status") ? localStorage.getItem("status") : "fail";
+
+    console.log(status);
+    if (status === "success") {
+
+        addProduct()
+        addToCard(item.id, product, item.nature.type)
+        let btnAdd = document.querySelectorAll('.card__node .btn')
+        let message = document.querySelector('.message')
+        message.classList.add('show')
+        setTimeout(() => {
+            message.classList.remove('show')
+            message.classList.add('hide')
+        }, 2000)
+
+    } else {
+        confirm("Please Login")
+    }
 })
 
 
@@ -160,40 +178,40 @@ function typeProduct() {
 }
 
 function addToCard(id, productFilter, type) {
-  let quatilyCart = Number(localStorage.getItem('quatilyCart'))  //số lượng có trong giỏ hàng
-  let arrCart = JSON.parse(localStorage.getItem('listCart')) // mảng sản phẩm có trong giỏ hàng
+    let quatilyCart = Number(localStorage.getItem('quatilyCart'))  //số lượng có trong giỏ hàng
+    let arrCart = JSON.parse(localStorage.getItem('listCart')) // mảng sản phẩm có trong giỏ hàng
 
-  let flag = false  // biến cờ
-  let tmp;
-  for (let i = 0; i < productFilter.length; i++) {
-    if (productFilter[i].id == id) {
-      tmp = productFilter[i];
-      quatily = 1;
+    let flag = false  // biến cờ
+    let tmp;
+    for (let i = 0; i < productFilter.length; i++) {
+        if (productFilter[i].id == id) {
+            tmp = productFilter[i];
+            quatily = 1;
+        }
     }
-  }
 
-  // tìm id trùng trong list product đã thêm
-  for (let i = 0; i < arrCart.length; i++) {
-    if (arrCart[i].product.id == id && arrCart[i].product.nature.type == type) {
-      flag = true
-      arrCart[i].quatily += 1
+    // tìm id trùng trong list product đã thêm
+    for (let i = 0; i < arrCart.length; i++) {
+        if (arrCart[i].product.id == id && arrCart[i].product.nature.type == type) {
+            flag = true
+            arrCart[i].quatily += 1
+        }
     }
-  }
-  if (flag == false)   // nếu mặt hàng khác nhau thì push là list
-  {
-    // tạo một product để thêm vào list arrCart
-    let item = {
-      quatily: quatily,
-      product: tmp
+    if (flag == false)   // nếu mặt hàng khác nhau thì push là list
+    {
+        // tạo một product để thêm vào list arrCart
+        let item = {
+            quatily: quatily,
+            product: tmp
+        }
+        arrCart.push(item)  // add vào
+        quatilyCart += 1   // tăng số lượng của  giỏ hàng
     }
-    arrCart.push(item)  // add vào
-    quatilyCart += 1   // tăng số lượng của  giỏ hàng
-  }
-  console.log(quatilyCart);
+    console.log(quatilyCart);
 
-  document.querySelector(".fa-cart-shopping span").innerHTML = quatilyCart;
-  localStorage.setItem("listCart", JSON.stringify(arrCart));
-  localStorage.setItem("quatilyCart", JSON.stringify(quatilyCart));
+    document.querySelector(".fa-cart-shopping span").innerHTML = quatilyCart;
+    localStorage.setItem("listCart", JSON.stringify(arrCart));
+    localStorage.setItem("quatilyCart", JSON.stringify(quatilyCart));
 }
 function detailproduct(item) {
     console.log(item);
@@ -273,7 +291,29 @@ function showProduct() {
                 let newAdd = document.createElement('button');
                 newAdd.classList.add('btn');
                 newAdd.textContent = 'Add to cart';
-                newAdd.addEventListener('click', () => addToCard(item.id, data, item.nature.type));
+                newAdd.addEventListener('click', function () {
+                    let status = localStorage.getItem("status") ? localStorage.getItem("status") : "fail";
+
+                    console.log(status);
+                    if (status === "success") {
+                        addToCard(item.id, product, item.nature.type)
+                        let btnAdd = document.querySelectorAll('.card__node .btn')
+                        let message = document.querySelector('.message')
+
+                        btnAdd.forEach((item) => {
+                            item.addEventListener('click', () => {
+                                message.classList.add('show')
+                                setTimeout(() => {
+                                    message.classList.remove('show')
+                                    message.classList.add('hide')
+                                }, 2000)
+                            })
+
+                        })
+                    } else {
+                        confirm("Please log in")
+                    }
+                })
                 nodeCart.appendChild(newAdd);
 
                 newItem.appendChild(nodeCart)  // gán cho card

@@ -23,12 +23,12 @@ const cpassword = document.getElementById('cpassword')
 const btnSignup = document.getElementById('btn-signup')
 const input = document.querySelectorAll('input')
 const error = document.querySelectorAll('.error')
+    localStorage.setItem("correct-password", "")
 let arrEmpty = []
 
 
 // Biến để theo dõi trạng thái của các điều kiện
 let allConditionsMet = false;
-
 function Checksubmit() {
     allConditionsMet = true;     // Đặt biến về true để bắt đầu kiểm tra
     input.forEach((item) => {  // kiểm tra giá trị các ô input có ô nào trống hay không
@@ -54,6 +54,13 @@ function Checksubmit() {
 
         })
     })
+    let correctPassword = localStorage.getItem("correct-password")
+    console.log(correctPassword);
+    if ( correctPassword === "correct"){
+        allConditionsMet = true;
+    }else{
+        allConditionsMet = false;
+    }
     arrEmpty = []  // reset lại mảng rỗng   
 }
 
@@ -111,6 +118,7 @@ document.getElementById('password').addEventListener('blur', function () {
     } else {
         passwordError.innerHTML = '';
         document.getElementById('password').classList.add('success')
+
     }
 });
 
@@ -120,6 +128,7 @@ document.getElementById('cpassword').addEventListener('blur', function () {
     const cpasswordInput = this.value;
     const cpasswordError = document.getElementById('cpassword-error');
 
+
     if (cpasswordInput === '') {
         cpasswordError.innerHTML = 'Confirm password field cannot be left blank';
         cpasswordError.style.visibility = 'visible'
@@ -127,9 +136,11 @@ document.getElementById('cpassword').addEventListener('blur', function () {
         cpasswordError.innerHTML = 'Passwords do not match';
         cpasswordError.style.visibility = 'visible'
         document.getElementById('cpassword').classList.remove('success')
+        localStorage.setItem("correct-password", "wrong")
     } else {
         cpasswordError.innerHTML = '';
         document.getElementById('cpassword').classList.add('success')
+        localStorage.setItem("correct-password", "correct")
     }
 });
 const modalOverlay = document.querySelector('.modal-overlay');

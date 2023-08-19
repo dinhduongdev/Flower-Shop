@@ -40,7 +40,8 @@ document.querySelectorAll(".nav-item ul li a").forEach((item => {
     if (screen.width < 768) {
       location.reload()
     }
-  })}
+  })
+}
 ))
 
 var iconSearch = document.querySelector(".header__optionSearch .icon-search");
@@ -293,7 +294,30 @@ function showProduct(product, list, count) {
     let newAdd = document.createElement('button');
     newAdd.classList.add('btn');
     newAdd.textContent = 'Add to cart';
-    newAdd.addEventListener('click', () => addToCard(item.id, product, item.nature.type));
+    // newAdd.addEventListener('click', () =>  addToCard(item.id, product, item.nature.type));
+    newAdd.addEventListener('click', function () {
+      let status = localStorage.getItem("status") ? localStorage.getItem("status") : "fail";
+
+      console.log(status);
+      if (status === "success") {
+        addToCard(item.id, product, item.nature.type)
+        let btnAdd = document.querySelectorAll('.card__node .btn')
+        let message = document.querySelector('.message')
+
+        btnAdd.forEach((item) => {
+          item.addEventListener('click', () => {
+            message.classList.add('show')
+            setTimeout(() => {
+              message.classList.remove('show')
+              message.classList.add('hide')
+            }, 2000)
+          })
+
+        })
+      } else {
+        confirm("Please log in")
+      }
+    })
     nodeCart.appendChild(newAdd);
 
 
@@ -355,19 +379,19 @@ function GetProducts(api, list, count, filterType) {
         handleFilterSubmit(event, data, list, count);
       });
       //message
-      let btnAdd = document.querySelectorAll('.card__node .btn')
-      let message = document.querySelector('.message')
+      // let btnAdd = document.querySelectorAll('.card__node .btn')
+      // let message = document.querySelector('.message')
 
-      btnAdd.forEach((item) => {
-        item.addEventListener('click', () => {
-          message.classList.add('show')
-          setTimeout(() => {
-            message.classList.remove('show')
-            message.classList.add('hide')
-          }, 2000)
-        })
+      // btnAdd.forEach((item) => {
+      //   item.addEventListener('click', () => {
+      //     message.classList.add('show')
+      //     setTimeout(() => {
+      //       message.classList.remove('show')
+      //       message.classList.add('hide')
+      //     }, 2000)
+      //   })
 
-      })
+      // })
     })
 }
 let filterLove = document.querySelector('.filter--love');

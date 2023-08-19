@@ -437,6 +437,7 @@
     .header .header__option .fa-user,
     .header .header__option .fa-cart-shopping {
       margin: 2rem 0;
+      color: #fff;
     }
     .header .header__optionSearch .icon-search {
       margin-right: 2rem;
