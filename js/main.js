@@ -443,3 +443,12 @@ function detailproduct(item) {
   localStorage.setItem('detail-product', JSON.stringify(item))
   window.location.href = './detail.html'
 }
+
+
+
+// let shop = document.querySelectorAll(".nav-links .nav-item ul li a").forEach((item) => {
+//   item.addEventListener("click", (e) => {
+//     let location = window.location.href
+//     window.location.href = location + e.target.href;
+//   });
+// });
