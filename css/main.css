@@ -97,7 +97,7 @@ main .sale {
   border-radius: 2rem;
   height: 30rem;
   padding: 1rem 2rem;
-  background-image: url(/images/sale/sale-bg.jpg);
+  background-image: url(../images/sale/sale-bg.jpg);
   background-repeat: no-repeat; /* Ngăn ảnh nền lặp lại */
   background-size: cover; /* Hiển thị ảnh nền theo tỷ lệ thích hợp */
   margin-top: 2rem;
