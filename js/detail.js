@@ -296,7 +296,7 @@ function showProduct() {
 
                     console.log(status);
                     if (status === "success") {
-                        addToCard(item.id, product, item.nature.type)
+                        addToCard(item.id, data, item.nature.type)
                         let btnAdd = document.querySelectorAll('.card__node .btn')
                         let message = document.querySelector('.message')
 

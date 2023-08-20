@@ -173,28 +173,14 @@ section.connection .list-product {
 }
 
 
-/* cái này tao viết */
-section.connection .list {
-  padding: 5rem 2rem;
-  background-image: linear-gradient(#ffecd2 0%, #fcb69f 100%);
-  display: flex;
-  flex-wrap: wrap;
-
-  column-gap: 2%;
-  row-gap: 2rem;
-}
-
-section.connection .list .card {
-  width: 32%;
-}
-
 section.detail .detail__info .quantily button.disabled{
   opacity: 0.5;
   cursor: not-allowed;
 }
+
 section.connection .list {
   padding: 5rem 1rem;
-  background-image: linear-gradient(#ffecd2 0%, #fcb69f 100%);
+  background-image: linear-gradient(#f0fcf3 0%, #91c9be 100%);
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 2%;
@@ -205,6 +191,14 @@ section.connection .list {
 
 section.connection .list .card {
   width: 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section.connection .list .card__node .btn{
+  width: 100%;
+  padding: 1.5rem;
 }
 
 section.comments {
@@ -362,11 +356,6 @@ section.comments .comment-user .comment-user-list .item{
   section.connection .list .card__node {
     padding: 1rem;
     flex-direction: column;
-  }
-
-  section.connection .list .card__node .btn{
-    width: 100%;
-    padding: 1.5rem;
   }
 
 }

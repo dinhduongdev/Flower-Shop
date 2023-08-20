@@ -321,7 +321,7 @@ section.products .countResults {
 section.products .list {
   padding: 5rem 1rem;
   /* background-image: linear-gradient(#ffecd2 0%, #fcb69f 100%); */
-  background-image: linear-gradient(#f0f0fc 0%, #91c9be 100%);
+  background-image: linear-gradient(#f0fcf3 0%, #91c9be 100%);
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 2%;

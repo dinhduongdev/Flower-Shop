@@ -31,10 +31,10 @@
                 <td>
                     <button class="btnDelete">Delete</button>
                 </td>
-          </tr>
+            </tr>
       `;
         sumMoney += item.quatily * item.product.price;
-       sumQuantity += item.quatily
+        sumQuantity += item.quatily
     });
 
     text +=
