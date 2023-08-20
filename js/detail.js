@@ -334,32 +334,38 @@ let userCmt = document.querySelector(".comments__cmt input")
 console.log(userCmt);
 let arrCmt = []
 function createcomment(){
-    let cmtValue = userCmt.value
-    userCmt.value = ""
-    let cmt = {
-        comment: cmtValue
+    if(localStorage.getItem("status") === "success"){
+        let cmtValue = userCmt.value
+        userCmt.value = ""
+        let cmt = {
+            comment: cmtValue
+        }
+        arrCmt.push(cmt)
+        localStorage.setItem("arrCmt" , JSON.stringify(arrCmt))
+    
+        let dataCmt = JSON.parse(localStorage.getItem("arrCmt"))
+        console.log(dataCmt);
+        let listCmt = document.querySelector(".comment-user .comment-user-list")
+        let textCmt = ""
+        dataCmt.forEach((cmt)=>{
+            textCmt += 
+            `
+                <div class="item">
+                    <div class="item-img">
+                        <img src="./images/review/duong.jpg" alt="">
+                    </div>
+                    <div class="item-info">
+                        <h5>Phạm Đình Dương</h5>
+                        <p>${cmt.comment}</p>
+                        <span>like</span> <span>feedback</span> <span class="time">1 minute</span>
+                    </div>
+                </div>
+            `
+        })
+        listCmt.innerHTML = textCmt
+    }else{
+        confirm("Please log in")
+        userCmt.value = ""
     }
-    arrCmt.push(cmt)
-    localStorage.setItem("arrCmt" , JSON.stringify(arrCmt))
-
-    let dataCmt = JSON.parse(localStorage.getItem("arrCmt"))
-    console.log(dataCmt);
-    let listCmt = document.querySelector(".comment-user .comment-user-list")
-    let textCmt = ""
-    dataCmt.forEach((cmt)=>{
-        textCmt += 
-        `
-            <div class="item">
-                <div class="item-img">
-                    <img src="./images/review/duong.jpg" alt="">
-                </div>
-                <div class="item-info">
-                    <h5>Phạm Đình Dương</h5>
-                    <p>${cmt.comment}</p>
-                    <span>like</span> <span>feedback</span> <span class="time">1 minute</span>
-                </div>
-            </div>
-        `
-    })
-    listCmt.innerHTML = textCmt
+    
 }

@@ -3,13 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400;500&family=Open+Sans:wght@400;500&display=swap');
 
 :root {
-    --primary-color: #ff226f;
+    --primary-color: #FF6464;
     --primary-color-dark: #fe6769;
     --text-dark: #333333;
     --white: #ffffff;
     --gray: gray;
     --green-text: #57b8a5;
     --green-bg: #2b495c;
+    --box-shadow: 0 0 2rem #000;
   }
   
 *,

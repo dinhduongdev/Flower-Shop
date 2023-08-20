@@ -1,3 +1,7 @@
+.main{
+  min-height: 100vh;
+}
+
 section.content {
   color: #474C5F;
   padding: 3rem 5%;

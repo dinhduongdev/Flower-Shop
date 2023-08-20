@@ -32,7 +32,7 @@
 .card:hover {
     /* border: 0.1rem solid green; */
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
-      box-shadow: 0 0 2rem #000;
+    box-shadow: var(--box-shadow);
 
 }
 
@@ -74,7 +74,7 @@
 .card__evaluate .star {
     color: yellow;
     font-size: 1.5rem;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
 .card__evaluate .review {
@@ -97,7 +97,7 @@
     top: 30%;
     right: 0.5rem;
     background-color: rgb(106, 168, 126);
-    padding: 2rem ;
+    padding: 2rem;
     z-index: 1;
     border-radius: 5rem;
     display: none;
@@ -133,74 +133,79 @@
 }
 
 .scroll-top {
-  position: fixed;
-  bottom: 10%;
-  right: 1%;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  font-size: 2rem;
-  background-color: gray;
-  color: white;
-  display: none;
+    position: fixed;
+    bottom: 10%;
+    right: 1%;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    background-color: rgb(63, 94, 114);
+    color: white;
+    display: none;
+    box-shadow: rgba(22, 22, 22, 0.16) 0px 2px 4px;
 }
-.scroll-top img{
+
+.scroll-top img {
     width: 100%;
     height: 100%;
 }
-.scroll-top:hover{
+
+.scroll-top:hover {
     background-color: var(--green-text);
+    transition: 0.3s;
 }
 
 
 @keyframes hide_message {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
-  
+
     40% {
-      opacity: 0.6;
+        opacity: 0.6;
     }
-  
+
     60% {
-      opacity: 0.4;
+        opacity: 0.4;
     }
-  
+
     80% {
-      opacity: 0.2;
+        opacity: 0.2;
     }
-  
+
     100% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  
-  @keyframes show_message {
+}
+
+@keyframes show_message {
     0% {
-      opacity: 0.2;
-      transform: translateY(-0.2rem);
+        opacity: 0.2;
+        transform: translateY(-0.2rem);
     }
-  
+
     40% {
-      opacity: 0.4;
-      transform: translateY(-0.4rem);
+        opacity: 0.4;
+        transform: translateY(-0.4rem);
     }
-  
+
     60% {
-      opacity: 0.6;
-      transform: translateY(-0.6rem);
+        opacity: 0.6;
+        transform: translateY(-0.6rem);
     }
-  
+
     80% {
-      opacity: 0.8;
-      transform: translateY(-0.8rem);
+        opacity: 0.8;
+        transform: translateY(-0.8rem);
     }
-  
+
     100% {
-      opacity: 1;
-      transform: translateY(-1rem);
+        opacity: 1;
+        transform: translateY(-1rem);
     }
-  }
+}
+
 @keyframes swing {
     0% {
         transform: rotate(5deg);
@@ -365,9 +370,10 @@
 }
 
 @media screen and (max-width: 768px) {
-    html{
+    html {
         font-size: 55%;
     }
+
     .card__name {
         font-size: 1.6rem;
     }
@@ -384,21 +390,25 @@
     .card__node i {
         margin-top: 0.5rem;
     }
+
     .message {
         padding: .5rem;
     }
+
     .message .msg {
         font-size: 1.2rem;
     }
+
     .message .close {
         font-size: 1.2rem;
     }
 }
 
 @media screen and (max-width: 576px) {
-    html{
+    html {
         font-size: 50%;
     }
+
     .card {
         width: 100%;
     }

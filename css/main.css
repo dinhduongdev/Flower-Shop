@@ -320,7 +320,8 @@ section.products .countResults {
 
 section.products .list {
   padding: 5rem 1rem;
-  background-image: linear-gradient(#ffecd2 0%, #fcb69f 100%);
+  /* background-image: linear-gradient(#ffecd2 0%, #fcb69f 100%); */
+  background-image: linear-gradient(#f0f0fc 0%, #91c9be 100%);
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 2%;
@@ -331,10 +332,17 @@ section.products .list {
 
 section.products .list .card {
   width: 23%;
-  /* border: 1px solid #9b9b9b; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
+
+section.products .list .card__node .btn{
+  width: 100%;
+  padding: 1.5rem;
+}
 
 @media screen and (max-width: 1400px) {
   section.products .filter .item {
@@ -372,9 +380,9 @@ section.products .list .card {
   }
 
   section.sale .sale-time #timer .timer-item {
-    width: 5rem;
-    height: 5rem;
-    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.6rem;
   }
 
   main .outstand{
@@ -430,11 +438,6 @@ section.products .list .card {
 
   section.products .list .card__evaluate .review {
     font-size: 1.2rem;
-  }
-
-  section.products .list .card__node .btn{
-    width: 100%;
-    padding: 1.5rem;
   }
 }
 
@@ -527,7 +530,6 @@ section.products .list .card {
   section.products h3 {
     font-size: 3rem;
     padding: 3rem 0;
-    color: #bd2026;
     text-transform: uppercase;
     font-weight: bold;
   }
