@@ -16,7 +16,7 @@ function loadcomment(api) {
                         <div class="card__content">
                             <span><i class="ri-double-quotes-l"></i></span>
                             <div class="card__details">
-                                <h4>- ${item.name}</h4>
+                                <h4>${item.name}</h4>
                                 <p>
                                     "${item.comment}"
                                 </p>

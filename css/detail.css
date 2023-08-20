@@ -52,7 +52,7 @@ section.detail .detail__info h3 {
 
 section.detail .detail__info .price {
   font-size: 2.5rem;
-  color: black;
+  color: var(--green-text);
   font-weight: 700;
 }
 
@@ -68,7 +68,7 @@ section.detail .detail__info .star i {
 }
 
 section.detail .detail__info .quantily button {
-  background-color: var(--green-bg);
+  /* background-color: var(--green-bg); */
   /* padding: 0.5rem 1rem; */
   border-radius: 10%;
   font-size: 1.6rem;
@@ -76,6 +76,8 @@ section.detail .detail__info .quantily button {
   width: 4.5rem;
   height: 4rem;
 }
+
+
 
 section.detail .detail__info .quantily .btn-quantity {
   width: 4rem;
@@ -148,8 +150,8 @@ section.detail .detail__info .btn-detail{
 
 section.connection {
   width: 80%;
-  margin: 0 auto;
-
+  margin: 5rem auto;
+  /* margin-bottom: 5rem; */
 }
 
 section.connection h3 {
@@ -362,9 +364,11 @@ section.comments .comment-user .comment-user-list .item{
     flex-direction: column;
   }
 
-  section.connection .list .card__node i {
-    margin-top: 0.5rem;
+  section.connection .list .card__node .btn{
+    width: 100%;
+    padding: 1.5rem;
   }
+
 }
 
 @media screen and (max-width: 576px) {

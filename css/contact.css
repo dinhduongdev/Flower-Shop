@@ -6,7 +6,7 @@ section.content {
 section.content > h3 {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--green-bg);
   border-bottom: 0.1rem solid gray;
   padding: 1rem 0;
   margin-bottom: 2rem;

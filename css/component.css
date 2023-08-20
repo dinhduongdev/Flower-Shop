@@ -10,7 +10,7 @@
     /* background-color: #FF9A8B;
     background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%); */
     border: .2rem solid var(--green-bg);
-    transition: 1s all;
+    transition: 0.5s all;
 }
 
 .btn:hover {
@@ -143,6 +143,13 @@
   background-color: gray;
   color: white;
   display: none;
+}
+.scroll-top img{
+    width: 100%;
+    height: 100%;
+}
+.scroll-top:hover{
+    background-color: var(--green-text);
 }
 
 

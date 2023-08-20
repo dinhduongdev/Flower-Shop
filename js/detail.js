@@ -36,9 +36,9 @@
             </div>
             
             <div class="quantily">
-            <button class="btnDecrease">-</button>
+            <button class="btnDecrease btn">-</button>
             <input class="btn-quantity" type="text" value=1>
-            <button class="btnIncrease">+</button>
+            <button class="btnIncrease btn">+</button>
             </div>
 
             <button class="btn btn-detail">add to cart</button>

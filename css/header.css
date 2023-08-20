@@ -56,7 +56,7 @@
 
 
   .header .header__option--nav .nav-links .nav-item > a .dropdown-icon{
-    color: black;
+    color: var(--green-bg);
     padding: 5px;
     transform: rotate(360deg);
     transition: 0.2s;
@@ -72,7 +72,7 @@
     font-size: 2rem;
     font-weight: 600;
     text-decoration: none;
-    color: black;
+    color: var(--green-bg);
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     position: relative;
@@ -86,7 +86,7 @@
     content: "";
     width: 0%;
     height: 1.5px;
-    background-color: black;
+    background-color: var(--green-bg);
     top: 20%;
     left: 0;
     transition: all 0.3s ease-in-out;
@@ -96,7 +96,7 @@
     content: "";
     width: 0%;
     height: 1.5px;
-    background-color: black;
+    background-color: var(--green-bg);
     bottom: 20%;
     right: 0;
     transition: all 0.3s ease-in-out;
@@ -222,7 +222,7 @@
     padding: 1rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    margin: 0 1rem;
+    margin-left: 1rem;
   }
   .header .header__optionSearch .icon-search:hover {
     color: #57b8a5;
@@ -299,10 +299,13 @@
       /* margin-right: 1.5rem; */
     }
     .header .header__option--nav .nav-links{
-      margin-right: 1rem;
+      margin-right: 0rem;
+    }
+    .header .header__option--nav .nav-links > .nav-item{
+      margin: 0 1rem;
     }
     .header .header__option--nav .nav-links .nav-item a {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
     }
     .header .header__option--login button {
       width: 9rem;
@@ -313,7 +316,7 @@
   @media screen and (max-width: 992px) {
     .header {
       /* height: 7rem; */
-      padding: 0 4%;
+      padding: 0 3%;
     }
     .header .header__option {
       /* right: 9rem; */
@@ -331,7 +334,7 @@
       font-size: 1.5rem;
     }
     .header .header__optionSearch .icon-search{
-      margin: 0;
+      margin: .5rem;
     }
     .header .header__option--login button {
       width: 7rem;

@@ -16,7 +16,18 @@ main .review .container {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
+main .review h3{  width: 90%;
+  margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--green-bg);
+  border-bottom: 0.1rem solid gray;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
 .container .container__right,
 .container .container__left {
   width: 45%;
@@ -35,9 +46,9 @@ main .review .container {
   margin-bottom: 3rem;
   font-size: 4rem;
   font-weight: 600;
-  color: var(--primary-color);  
-  text-shadow: 3px 3px 20px #ff99cc,
-  -2px 1px 30px #ff99cc;
+  color: var(--green-bg);  
+  /* text-shadow: 3px 3px 20px #ff99cc, */
+  /* -2px 1px 30px #ff99cc; */
 }
 
 .container .container__left p {
@@ -68,8 +79,10 @@ main .review .container {
 }
 
 .container__right .card:hover {
-
   transform: scale(1.1);
+}
+.container__right .card:hover .card__content .card__details h4{
+  color: var(--green-text);
 }
 
 .container__right .card img {
@@ -90,7 +103,7 @@ main .review .container {
 
 .container__right .card .card__content .card__details h4 {
   text-align: left;
-  color: var(--primary-color);
+  color: var(--green-bg);
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -137,8 +150,6 @@ section.achievements{
   transition: 0.3s;
 }
 
-
-
 .achievements-list .achievements-list-item img{
   width: 5rem;
   margin: 0 auto;
@@ -171,6 +182,10 @@ section.achievements{
   .container .container__left {
     width: 100%;
     margin-bottom: 5rem;
+  }
+
+  .container__right .card{
+    padding: 1rem;
   }
 
   .container .container__left .btn{

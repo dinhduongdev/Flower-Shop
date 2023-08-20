@@ -97,8 +97,9 @@ main .sale {
   border-radius: 2rem;
   height: 30rem;
   padding: 1rem 2rem;
-  background-color: #FBDA61;
-  background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+  background-image: url(/images/sale/sale-bg.jpg);
+  background-repeat: no-repeat; /* Ngăn ảnh nền lặp lại */
+  background-size: cover; /* Hiển thị ảnh nền theo tỷ lệ thích hợp */
   margin-top: 2rem;
 }
 
@@ -109,8 +110,9 @@ main .sale .sale-time {
 
 main .sale .sale-time h3 {
   font-weight: 700;
-  font-size: 2.5rem;
-  line-height: 1;
+  font-size: 3rem;
+  letter-spacing: .5rem;
+  line-height: 2;
   text-transform: uppercase;
   color: #ffe818;
   margin-bottom: 5px;
@@ -134,9 +136,11 @@ main .sale .sale-time #timer .timer-item {
   align-items: center;
   background-color: black;
   font-size: 3rem;
-  border-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
   margin: 0 1rem;
   color: white;
+  box-shadow: 0 0 2rem #000;
   position: relative;
 }
 
@@ -151,10 +155,11 @@ main .sale .sale-time #timer .timer-item:not(:last-child)::after {
 
 main .sale .sale-time img {
   position: absolute;
-  width: 3rem;
+  width: 5rem;
   height: 5rem;
   top: 0;
-  left: 5rem;
+  left: 100%;
+  transform: translateY(-50%);
 }
 
 main .sale .sale-image {
@@ -233,11 +238,9 @@ section.products {
 section.products h3 {
   font-size: 4rem;
   padding: 3rem 0;
-  color: var(--primary-color);
+  color: var(--green-bg);
   text-transform: uppercase;
   font-weight: 700;
-  text-shadow: 3px 3px 20px #ff99cc,
-    -2px 1px 30px #ff99cc;
   font-family: 'Poppins', sans-serif;
   letter-spacing: .5rem;
 }
@@ -328,6 +331,7 @@ section.products .list {
 
 section.products .list .card {
   width: 23%;
+  /* border: 1px solid #9b9b9b; */
 }
 
 
@@ -409,11 +413,11 @@ section.products .list .card {
   }
 
   section.products .filter .item.submit button {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   section.products .list .card {
-    width: 45%;
+    width: 47%;
   }
 
   section.products .list .card__name {
@@ -426,6 +430,11 @@ section.products .list .card {
 
   section.products .list .card__evaluate .review {
     font-size: 1.2rem;
+  }
+
+  section.products .list .card__node .btn{
+    width: 100%;
+    padding: 1.5rem;
   }
 }
 
