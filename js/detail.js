@@ -24,23 +24,23 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
             </div>
-            <div class="quantily">
-                <button class="btnDecrease">-</button>
-                <input class="btn-quantity" type="text" style="width: 30px" value=1>
-                <button class="btnIncrease">+</button>
 
-            </div>
-
-            <div class="faster">Đặt hoa nhanh: <span><i class="fa-solid fa-phone"></i>0347163896</span><span><i class="fa-solid fa-phone"></i>0794914351</span></div>
-            <div class="pays">Thanh toán: 
+            <div class="faster">Quick order: <span><i class="fa-solid fa-phone"></i>0347163896</span><span><i class="fa-solid fa-phone"></i>0794914351</span></div>
+            <div class="pays">Payment methods: 
                 <div class="pays-image">
-                    <img src="./images/detail/atm.png" alt=""> 
-                    <img src="./images/detail/visa.png"  alt=""> 
-                    <img src="./images/detail/mastercard.png"  alt=""> 
-                    <img src="./images/detail/JCB.png"  alt=""> 
+                    <img src="./images/detail/visa.svg" alt=""> 
+                    <img src="./images/detail/mastercard.svg"  alt=""> 
+                    <img src="./images/detail/american_express.svg"  alt=""> 
+                    <img src="./images/detail/apple_pay.svg"  alt=""> 
                 </div>
             </div>
             
+            <div class="quantily">
+            <button class="btnDecrease">-</button>
+            <input class="btn-quantity" type="text" value=1>
+            <button class="btnIncrease">+</button>
+            </div>
+
             <button class="btn btn-detail">add to cart</button>
            
         </div>
@@ -326,5 +326,40 @@ function showProduct() {
 
 
 }
-
 showProduct()
+
+
+// comment
+let userCmt = document.querySelector(".comments__cmt input")
+console.log(userCmt);
+let arrCmt = []
+function createcomment(){
+    let cmtValue = userCmt.value
+    userCmt.value = ""
+    let cmt = {
+        comment: cmtValue
+    }
+    arrCmt.push(cmt)
+    localStorage.setItem("arrCmt" , JSON.stringify(arrCmt))
+
+    let dataCmt = JSON.parse(localStorage.getItem("arrCmt"))
+    console.log(dataCmt);
+    let listCmt = document.querySelector(".comment-user .comment-user-list")
+    let textCmt = ""
+    dataCmt.forEach((cmt)=>{
+        textCmt += 
+        `
+            <div class="item">
+                <div class="item-img">
+                    <img src="./images/review/duong.jpg" alt="">
+                </div>
+                <div class="item-info">
+                    <h5>Phạm Đình Dương</h5>
+                    <p>${cmt.comment}</p>
+                    <span>like</span> <span>feedback</span> <span class="time">1 minute</span>
+                </div>
+            </div>
+        `
+    })
+    listCmt.innerHTML = textCmt
+}

@@ -3,23 +3,23 @@
     text-transform: uppercase;
     padding: 1rem 1.5rem;
     font-family: 'Open Sans', sans-serif;
-    background-color: #007bff;
-    border-radius: 2rem;
+    background-color: var(--green-bg);
+    border-radius: .5rem;
     color: #fff;
     cursor: pointer;
-    background-color: #FBDA61;
-    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+    /* background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%); */
+    border: .2rem solid var(--green-bg);
     transition: 1s all;
 }
 
 .btn:hover {
-    background-color: #FBDA61;
-    background-image: linear-gradient(-45deg, #FF5ACD 0%, #FBDA61 100%);
+    /* background-color: #FBDA61;
+    background-image: linear-gradient(-45deg, #FF5ACD 0%, #FBDA61 100%); */
+    background-color: var(--green-text);
+    border: .2rem solid var(--green-text);
 }
 
-.btn__2{
-
-}
 
 .card {
     text-align: center;
@@ -38,7 +38,7 @@
 
 .card__img {
     width: 100%;
-    height: 30rem;
+    /* height: 30rem; */
     margin: 0 auto;
     transition-duration: 0.4s;
     -o-object-fit: scale-down;

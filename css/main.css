@@ -235,9 +235,11 @@ section.products h3 {
   padding: 3rem 0;
   color: var(--primary-color);
   text-transform: uppercase;
-  font-weight: 1000;
+  font-weight: 700;
   text-shadow: 3px 3px 20px #ff99cc,
     -2px 1px 30px #ff99cc;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: .5rem;
 }
 
 section.products .filter {
@@ -358,6 +360,7 @@ section.products .list .card {
 
   section.sale .sale-time h3 {
     font-size: 1.6rem;
+    letter-spacing: .3rem;
   }
 
   section.sale .sale-time #timer {

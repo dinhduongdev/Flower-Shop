@@ -124,6 +124,8 @@ btnLogin.addEventListener('click', (e) => {
 
   let emailLocal = localStorage.getItem('email')
   let passwordLocal = localStorage.getItem('password')
+
+  
   console.log(emailLocal, passwordLocal);
   console.log(email, password);
 

@@ -19,7 +19,7 @@ section.detail .detail__img {
 
 section.detail .detail__img,
 section.detail .detail__info {
-  width: 45%;
+  width: 48%;
   /* border: 1px solid red; */
   margin-bottom: 2rem;
 }
@@ -45,7 +45,7 @@ section.detail .detail__info .pays {
 
 section.detail .detail__info h3 {
   font-size: 3rem;
-  color: var(--primary-color);
+  color: var(--green-bg);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -68,17 +68,19 @@ section.detail .detail__info .star i {
 }
 
 section.detail .detail__info .quantily button {
-  background-color: #ff3333;
-  padding: 0.5rem 1rem;
+  background-color: var(--green-bg);
+  /* padding: 0.5rem 1rem; */
   border-radius: 10%;
   font-size: 1.6rem;
   color: white;
-
+  width: 4.5rem;
+  height: 4rem;
 }
 
 section.detail .detail__info .quantily .btn-quantity {
-  width: 3rem;
-  padding: .5rem;
+  width: 4rem;
+  height: 4rem;
+  /* padding: .5rem; */
   font-size: 1.6rem;
   text-align: center;
 }
@@ -87,22 +89,23 @@ section.detail .detail__info .faster {
   background-color: #E5E5E5;
   color: var(--gray);
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 section.detail .detail__info .faster span {
   background-color: #222944;
   color: #fff;
-  padding: .3rem 1rem;
+  padding: .5rem .8rem;
   border-radius: 2rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 section.detail .detail__info .faster span i {
   font-size: 1rem;
-  margin-right: 5px;
+  margin-right: 3px;
 }
 
 section.detail .detail__info .pays {
@@ -110,16 +113,19 @@ section.detail .detail__info .pays {
   align-items: center;
   color: black;
   font-size: 1.6rem;
+  justify-content: flex-start;
+  height: 4rem;
 }
 
 section.detail .detail__info .pays .pays-image {
   display: flex;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  height: 100%;
 }
 
 section.detail .detail__info .pays-image img {
-  /* width: 3rem; */
-  height: 3rem;
+  /* width: 100%; */
+  height: 100%;
   margin-right: 1rem;
 }
 
@@ -134,6 +140,12 @@ section.detail .detail__img .img-thumbnail img {
   margin: 1rem;
 }
 
+section.detail .detail__info .btn-detail{
+  width: 100%;
+  padding: 2rem;
+}
+
+
 section.connection {
   width: 80%;
   margin: 0 auto;
@@ -141,13 +153,11 @@ section.connection {
 }
 
 section.connection h3 {
-  font-size: 4rem;
+  font-size: 3rem;
   padding: 3rem 0;
-  color: var(--primary-color);
+  color: var(--green-bg);
   text-transform: uppercase;
   font-weight: 1000;
-  text-shadow: 3px 3px 20px #ff99cc,
-    -2px 1px 30px #ff99cc;
 }
 
 section.connection .list-product {
@@ -160,6 +170,8 @@ section.connection .list-product {
   row-gap: 2rem;
 }
 
+
+/* cái này tao viết */
 section.connection .list {
   padding: 5rem 2rem;
   background-image: linear-gradient(#ffecd2 0%, #fcb69f 100%);
@@ -178,12 +190,112 @@ section.detail .detail__info .quantily button.disabled{
   opacity: 0.5;
   cursor: not-allowed;
 }
+section.connection .list {
+  padding: 5rem 1rem;
+  background-image: linear-gradient(#ffecd2 0%, #fcb69f 100%);
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 2%;
+  column-gap: 2%;
+  row-gap: 2rem;
+  justify-content: center;
+}
+
+section.connection .list .card {
+  width: 23%;
+}
+
+section.comments {
+  width: 80%;
+  margin: 0 auto;
+}
+section.comments .user-comment {
+
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid gray;
+  padding: 2rem 0;
+}
+section.comments .user-comment .comments__img{
+  width: 5%;
+}
+section.comments .user-comment .comments__cmt{
+  width: 94%;
+}
+section.comments .user-comment .comments__img img{
+  width: 100%;
+}
+section.comments .user-comment .comments__cmt input{
+  width: 100%;
+  border: .1rem solid #d5d7d8;
+  font-size: 1.6rem;
+  padding: 1rem 0rem 3rem 1rem;
+
+}
+section.comments .user-comment .comments__cmt div{
+  height: 6rem;
+  background-color: #eff0f0;
+  padding: 1rem;
+}
+section.comments .user-comment .comments__cmt div button{
+  float: right;
+  text-transform: capitalize;
+}
+
+
+section.comments .comment-user .comment-user-list .item{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-bottom: .1rem solid gray;
+
+
+}
+.comment-user-list .item .item-img{
+
+  width: 5%;
+
+
+}
+.comment-user-list .item .item-img img{
+  width: 100%;
+}
+.comment-user-list .item .item-info{
+  width: 94%;
+  
+}
+.comment-user-list .item .item-info h5{
+  color: #385898;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+}
+.comment-user-list .item .item-info p{
+  font-size: 1.4rem;
+  color: #1C1E21;
+    padding-bottom: 1rem;
+}
+.comment-user-list .item .item-info span{
+  margin-right: .5rem;
+  color: #4267B2;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.comment-user-list .item .item-info .time{
+  color: gray;
+  text-transform: lowercase;
+}
+
+
 
 @media screen and (max-width: 1400px) {}
 
 @media screen and (max-width: 1200px) {}
 
 @media screen and (max-width: 992px) {
+  section.detail{
+      width: 92%;
+  }
   section.connection .list .card {
     width: 48%;
   }
@@ -199,6 +311,10 @@ section.detail .detail__info .quantily button.disabled{
   section.connection .list .card__evaluate .review {
     font-size: 1.2rem;
   }
+  /* section.comments .comments__img img{
+    width: 3rem;
+    height: 3rem;
+  } */
 }
 
 @media screen and (max-width: 768px) {
@@ -208,14 +324,31 @@ section.detail .detail__info .quantily button.disabled{
 
   section.detail {
     flex-direction: column;
+    width: 95%;
   }
-
 
   section.detail .detail__img,
   section.detail .detail__info {
     width: 100%;
   }
 
+  section.detail .detail__info .quantily{
+    text-align: center;
+  }
+
+  section.detail .detail__info .btn-detail{
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  section.connection {
+    width: 100%;
+  }
+  
+  section.connection h3 {
+    text-align: center;
+  }
   section.connection .list .card__name {
     font-size: 1.6rem;
   }
@@ -232,7 +365,6 @@ section.detail .detail__info .quantily button.disabled{
   section.connection .list .card__node i {
     margin-top: 0.5rem;
   }
-
 }
 
 @media screen and (max-width: 576px) {
@@ -241,7 +373,7 @@ section.detail .detail__info .quantily button.disabled{
   }
 
   section.connection .list {
-    padding: 5rem;
+    /* padding: 5rem; */
   }
 
   section.detail .detail__info {
@@ -249,7 +381,7 @@ section.detail .detail__info .quantily button.disabled{
   }
 
   section.connection .list .card {
-    width: 100%;
+    /* width: 100%; */
   }
 
   section.connection .list .card__img {

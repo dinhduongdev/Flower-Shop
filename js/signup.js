@@ -21,14 +21,14 @@ const email = document.getElementById('email')
 const password = document.getElementById('password')
 const cpassword = document.getElementById('cpassword')
 const btnSignup = document.getElementById('btn-signup')
-const input = document.querySelectorAll('input')
+const input = document.querySelectorAll('input')  // lấy tất cả input trong from sign up
 const error = document.querySelectorAll('.error')
     localStorage.setItem("correct-password", "")
 let arrEmpty = []
 
 
-// Biến để theo dõi trạng thái của các điều kiện
-let allConditionsMet = false;
+
+let allConditionsMet = false; // Biến để theo dõi trạng thái của các điều kiện
 function Checksubmit() {
     allConditionsMet = true;     // Đặt biến về true để bắt đầu kiểm tra
     input.forEach((item) => {  // kiểm tra giá trị các ô input có ô nào trống hay không
@@ -51,7 +51,6 @@ function Checksubmit() {
             let parentElement = item.parentElement
             let error = parentElement.querySelector('p')
             error.style.visibility = 'hidden'
-
         })
     })
     let correctPassword = localStorage.getItem("correct-password")
@@ -86,7 +85,6 @@ document.getElementById('email').addEventListener('blur', function () {
     console.log(emailError);
 
     if (emailInput === '') {
-
         emailError.innerHTML = 'Email address field cannot be left blank';
         emailError.style.visibility = 'visible'
     } else if (!isValidEmail(emailInput)) {

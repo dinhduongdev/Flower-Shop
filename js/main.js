@@ -12,7 +12,6 @@ window.addEventListener('scroll', () => {
 
 function topFunction() {
   document.documentElement.scrollTop = 0;
-
 }
 
 
@@ -446,9 +445,20 @@ function detailproduct(item) {
 
 
 
-// let shop = document.querySelectorAll(".nav-links .nav-item ul li a").forEach((item) => {
-//   item.addEventListener("click", (e) => {
-//     let location = window.location.href
-//     window.location.href = location + e.target.href;
+// Lấy danh sách tất cả các tùy chọn con
+// const subMenuLinks = document.querySelectorAll('.nav-links .nav-item ul li a');
+// console.log(subMenuLinks);
+
+// // Thêm sự kiện click cho các tùy chọn con
+// subMenuLinks.forEach(link => {
+//   link.addEventListener('click', function(e) {
+//     e.preventDefault();
+//     const targetPage = e.target.getAttribute('href'); // Lấy giá trị của thuộc tính href
+//     let href = window.location.origin + "./home.html" + targetPage; // Chuyển hướng đến trang tương ứng
+//     window.location.href =    href
 //   });
 // });
+
+
+
+// console.log(window.location.origin + "/home.html#");
